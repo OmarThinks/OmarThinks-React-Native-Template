@@ -1,8 +1,7 @@
 # Tasks:
 
-- [ ]: type is React
+- [ ]: Module resolver (@root, @components, @theme, @screens)
 - [ ]: Make React native paper works
-
 - [ ]: Make Theme works
 - [ ]: create `useAppTheme`
 - [ ]: Make Vector icons work

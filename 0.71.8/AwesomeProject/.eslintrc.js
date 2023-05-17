@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: [
+    // '@react-native-community',
+    'plugin:react/recommended',
+    'airbnb',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -15,5 +19,13 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'import/extensions': [
+      {
+        js: 'always',
+        jsx: 'always',
+        ts: 'always',
+        tsx: 'always',
+      },
+    ],
   },
 };

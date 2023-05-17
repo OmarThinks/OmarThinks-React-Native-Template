@@ -5,4 +5,16 @@ module.exports = {
       plugins: ['react-native-paper/babel'],
     },
   },
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        alias: {
+          '@root': '.',
+          '@app': './src',
+        },
+      },
+    ],
+  ],
 };

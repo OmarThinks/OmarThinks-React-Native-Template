@@ -3,7 +3,11 @@ import {
   SafeAreaView, ScrollView, StatusBar, Text,
 } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
-import { lightTheme } from './src/theme/theme';
+import { lightTheme } from './src/theme';
+import { darkTheme } from '@root/src/theme';
+
+
+//console.log(darkTheme);
 
 function App(): React.JSX.Element {
   const backgroundStyle = {
