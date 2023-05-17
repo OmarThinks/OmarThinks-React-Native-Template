@@ -1,6 +1,6 @@
 # Tasks:
 
-- [x]: Enable Airbnb style
+- [ ]: Clear App.tsx
 - [ ]: Install React native Paper
 - [ ]: Install Redux
 - [ ]: Add react native paper theme
