@@ -1,6 +1,9 @@
 # Tasks:
 
-- [ ]: Install React native Paper
+- [ ]: Make React native paper works
+- [ ]: Make Theme works
+- [ ]: create `useAppTheme`
+- [ ]: Make Vector icons work
 - [ ]: Install Redux
 - [ ]: Add react native paper theme
 - [ ]: enable dark theme
