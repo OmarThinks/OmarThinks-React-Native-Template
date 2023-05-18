@@ -13,9 +13,12 @@ const getData = async (key: string) => {
     const value = await AsyncStorage.getItem(key);
     if (value !== null) {
       // value previously stored
+      return value;
     }
+    return null;
   } catch (e) {
     // error reading value
+    return null;
   }
 };
 
