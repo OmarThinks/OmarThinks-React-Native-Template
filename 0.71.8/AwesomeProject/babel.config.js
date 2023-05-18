@@ -11,10 +11,11 @@ module.exports = {
       {
         root: ['.'],
         alias: {
-          '@theme': './src/theme/index.tsx'
+          '@theme': './src/theme/index.tsx',
+          '@redux': './src/redux/index.tsx'
           // '@app': './src/App.tsx' (Only if needed)
         }
       }
     ]
   ]
-}
+};

@@ -1,6 +1,5 @@
 # Tasks:
 
-- [ ]: Make Vector icons work
 - [ ]: Install Redux
 - [ ]: Add react native paper theme
 - [ ]: enable dark theme

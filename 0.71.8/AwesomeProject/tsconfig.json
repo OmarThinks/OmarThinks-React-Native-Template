@@ -4,7 +4,8 @@
     "jsx": "react-native",
     "baseUrl": ".",
     "paths": {
-      "@theme": ["./src/theme/index.tsx"]
+      "@theme": ["./src/theme/index.tsx"],
+      "@redux": ["./src/redux/index.tsx"]
       // "@app": ["./src/App.tsx"], (only if needed)
     }
   },

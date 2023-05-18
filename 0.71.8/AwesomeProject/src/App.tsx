@@ -2,8 +2,10 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 import { PaperProvider, Button } from 'react-native-paper';
 import { lightTheme } from '@theme';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@redux';
 
-function App () {
+function AppWithoutRedux () {
   const backgroundStyle = {
     backgroundColor: 'white'
   };
@@ -25,5 +27,13 @@ function App () {
     </PaperProvider>
   );
 }
+
+const App = () => {
+  return (
+    <ReduxProvider store={store}>
+      <AppWithoutRedux />
+    </ReduxProvider>
+  );
+};
 
 export default App;
