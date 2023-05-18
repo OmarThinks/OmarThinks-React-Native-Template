@@ -21,7 +21,10 @@ function AppFinal () {
       style={{
         backgroundColor: colors.appBg
       }}>
-      <StatusBar barStyle="dark-content" backgroundColor={colors.appBg} />
+      <StatusBar
+        barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
+        backgroundColor={colors.appBg}
+      />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={{
