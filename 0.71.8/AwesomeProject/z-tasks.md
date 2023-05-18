@@ -1,7 +1,5 @@
 # Tasks:
 
-- [ ]: create `useAppTheme`
-- [ ]: Add basic fonts
 - [ ]: Make Vector icons work
 - [ ]: Install Redux
 - [ ]: Add react native paper theme

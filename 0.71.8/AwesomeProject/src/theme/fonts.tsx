@@ -20,8 +20,8 @@ type CustomFonts = {
 };
 
 const additionalFonts = fontNumbers.reduce((acc, value) => {
-  console.log(value);
-  console.log(typeof value);
+  // console.log(value);
+  // console.log(typeof value);
 
   acc[`v${value}` as `v${1}`] = {
     fontSize: fontNumbers[value - 1] as 1,

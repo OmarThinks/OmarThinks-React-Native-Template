@@ -1,3 +1,3 @@
-import { lightTheme, darkTheme } from './theme';
+import { darkTheme, lightTheme, useAppTheme } from './theme';
 
-export { lightTheme, darkTheme };
+export { darkTheme, lightTheme, useAppTheme };

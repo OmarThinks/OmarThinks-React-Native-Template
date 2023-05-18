@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
-import { PaperProvider } from 'react-native-paper';
+import { PaperProvider, Button } from 'react-native-paper';
 import { lightTheme } from '@theme';
 
 function App () {
@@ -19,6 +19,7 @@ function App () {
           contentInsetAdjustmentBehavior="automatic"
           style={backgroundStyle}>
           <Text>Hey</Text>
+          <Button icon={'camera'}>Press me</Button>
         </ScrollView>
       </SafeAreaView>
     </PaperProvider>
