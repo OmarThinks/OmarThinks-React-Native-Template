@@ -6,7 +6,7 @@ const Splash = () => {
   const navigation = useNavigation();
 
   React.useEffect(() => {
-    navigation.navigate('Home');
+    navigation.replace('Home');
   }, []);
 
   return <View />;
