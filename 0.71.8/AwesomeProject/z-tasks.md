@@ -1,8 +1,8 @@
 # Tasks:
 
 - [x]: Install Redux
-- [ ]: Add react native paper theme to redux
-- [ ]: enable dark theme
+- [x]: Add react native paper theme to redux
+- [ ]: color: appBg
 - [ ]: toggle theme
 - [ ]: Theme form Redux
 - [ ]: React Router
