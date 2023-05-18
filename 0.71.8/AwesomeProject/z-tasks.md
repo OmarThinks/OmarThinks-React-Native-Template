@@ -1,10 +1,10 @@
 # Tasks:
 
-- [x]: seperate the default screen at a screen called Home
-- [ ]: React Navigation
 - [ ]: Create the Splash Screen
+- [ ]: Navigate from the Splash to Home
 - [ ]: Async Storage
-- [ ]: Theme fom Async Storage
+- [ ]: Theme from Async Storage
+- [ ]: Navigations TS
 - [ ]: Main Layout
 - [ ]: Components : AppBar
 - [ ]: Components : TouchFiller

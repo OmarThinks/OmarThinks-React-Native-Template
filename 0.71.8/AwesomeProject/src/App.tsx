@@ -1,11 +1,11 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { store, themeSelector } from '@redux';
+import { Home } from '@screens';
 import { darkTheme, lightTheme } from '@theme';
 import React from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
-import { Home } from '@screens';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
