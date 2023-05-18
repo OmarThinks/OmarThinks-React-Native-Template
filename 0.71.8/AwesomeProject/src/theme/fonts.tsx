@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'react-native-paper';
+/* import { DefaultTheme } from 'react-native-paper';
 
 const fontNumbers = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -28,6 +28,25 @@ const _customFonts = Object.keys(fontNumbers).reduce(
     };
   }
 );
+
+/*
+  [font in FontNumbers]: {
+    fontSize: font;
+    fontWeight: 'bold' | 'normal';
+  };
+
+*/
+/*
+// type ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
+// "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24, "25"]
+type FontNumbersStrings = (typeof fontNumbers)[number];
+
+type CustomFonts = {
+  [font in FontNumbers]: {
+    fontSize: font;
+    fontWeight: 'bold';
+  };
+};
 
 export const __customFonts = fontNumbers.reduce(
   (acc, value) => {
@@ -198,4 +217,78 @@ const customFonts: {
 const fonts = {
   ...DefaultTheme.fonts,
   ...customFonts
+};
+
+*/
+/*
+type a = 'a' | 'b' | 1;
+
+type b = `${a} hey`;
+
+type c = {
+  [key in b]: {};
+};
+
+const fontNumbers = [
+  1, 2, 3, 4, 5, 6
+  // 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+] as const;
+
+type FontNumbers = (typeof fontNumbers)[number];
+
+type _b = `v${FontNumbers}` | `v${FontNumbers}n`;
+
+type CustomFonts = {
+  [k in _b]: {
+    fontSize: number;
+    fontWeight: 'bold' | 'normal';
+  };
+};
+*/
+
+type a = 'a' | 'b' | 1;
+
+type b = `${a} hey`;
+
+type c = {
+  [key in b]: {};
+};
+
+const fontNumbers = [
+  1, 2
+  // 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+] as const;
+
+type FontNumbers = (typeof fontNumbers)[number];
+
+type CustomFonts = {
+  [k in FontNumbers as `v${k}`]: {
+    fontSize: k;
+    fontWeight: 'bold';
+  };
+} & {
+  [k in FontNumbers as `v${k}n`]: {
+    fontSize: k;
+    fontWeight: 'normal';
+  };
+};
+
+export const customFonts: CustomFonts = {
+  v1: {
+    fontSize: 1,
+    fontWeight: 'bold'
+  },
+  v2: {
+    fontSize: 2,
+    fontWeight: 'bold'
+  },
+  v1n: {
+    fontSize: 1,
+    fontWeight: 'normal'
+  },
+  v2n: {
+    fontSize: 2,
+    fontWeight: 'normal'
+  }
+  // b: 'hey'
 };
