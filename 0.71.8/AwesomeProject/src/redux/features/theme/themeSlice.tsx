@@ -2,26 +2,26 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 import type { RootState } from 'src/redux/store';
 
-type MainTheme = 'light' | 'dark';
+type Theme = 'light' | 'dark';
 
 export interface ThemeState {
-  mainTheme: MainTheme;
+  value: Theme;
 }
 
 const initialState: ThemeState = {
-  mainTheme: 'light'
+  value: 'light'
 };
 
 export const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    setTheme: (state, action: PayloadAction<MainTheme>) => {
+    setTheme: (state, action: PayloadAction<Theme>) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.mainTheme = action.payload;
+      state.value = action.payload;
     }
   }
 });
@@ -31,4 +31,4 @@ export const { setTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;
 
-export const mainThemeSelector = (state: RootState) => state.theme.mainTheme;
+export const mainThemeSelector = (state: RootState) => state.theme.value;

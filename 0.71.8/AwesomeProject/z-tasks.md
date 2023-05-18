@@ -2,7 +2,7 @@
 
 - [x]: Install Redux
 - [x]: Add react native paper theme to redux
-- [ ]: color: appBg
+- [x]: color: appBg
 - [ ]: toggle theme
 - [ ]: Theme form Redux
 - [ ]: React Router

@@ -1,5 +1,5 @@
 import { store } from '@redux';
-import { lightTheme } from '@theme';
+import { lightTheme, useAppTheme } from '@theme';
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 import { Button, PaperProvider } from 'react-native-paper';
