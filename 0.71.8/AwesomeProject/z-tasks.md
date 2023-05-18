@@ -1,10 +1,6 @@
 # Tasks:
 
-- [x]: Install Redux
-- [x]: Add react native paper theme to redux
-- [x]: color: appBg
-- [ ]: toggle theme
-- [ ]: Theme form Redux
+- [ ]: seperate the default screen at a screen called Home
 - [ ]: React Router
 - [ ]: Create the Splash Screen
 - [ ]: Async Storage
