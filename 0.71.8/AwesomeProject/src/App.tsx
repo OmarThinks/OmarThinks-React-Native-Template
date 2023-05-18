@@ -26,11 +26,3 @@ function App (): React.JSX.Element {
 }
 
 export default App
-
-/*
-Generate a regex that
-takes everything inside "src" expcept the "components" folder
-
-/src\/(?!components).*\/
-
-*/

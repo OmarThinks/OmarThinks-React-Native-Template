@@ -12,7 +12,8 @@ module.exports = {
         root: ['.'],
         alias: {
           // '@root': '.',
-          '@app': './src',
+          // '@app': './src',
+          '@app': './src/App.tsx',
           '@theme': './src/theme/index.tsx'
         }
       }

@@ -1,5 +1,6 @@
 # Tasks:
 
+- [ ]: Move app inside
 - [ ]: Module resolver (@root, @components, @theme, @screens)
 - [ ]: Make React native paper works
 - [ ]: Make Theme works

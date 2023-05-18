@@ -5,21 +5,10 @@
     "baseUrl": ".",
     "paths": {
       //"@root/*": ["./*"],
-      "@app/*": ["./src/*"],
+      //"@app/*": ["./src/*"],
+      "@app": ["./src/App.tsx"],
       "@theme": ["./src/theme/index.tsx"]
     }
   },
   "exclude": ["node_modules"]
 }
-
-/*
-Generate a regex that 
-takes everything inside "src" expcept the compont folder
-
-
-
-
-
-
-
-*/
