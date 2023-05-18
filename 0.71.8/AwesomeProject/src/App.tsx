@@ -6,6 +6,7 @@ import { darkTheme, lightTheme } from '@theme';
 import React from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Stack = createNativeStackNavigator();
 
