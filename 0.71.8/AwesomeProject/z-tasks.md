@@ -1,7 +1,7 @@
 # Tasks:
 
-- [ ]: seperate the default screen at a screen called Home
-- [ ]: React Router
+- [x]: seperate the default screen at a screen called Home
+- [ ]: React Navigation
 - [ ]: Create the Splash Screen
 - [ ]: Async Storage
 - [ ]: Theme fom Async Storage
