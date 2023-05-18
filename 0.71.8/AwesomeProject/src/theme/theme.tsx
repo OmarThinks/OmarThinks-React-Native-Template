@@ -3,6 +3,7 @@ import {
   MD3LightTheme as LightTheme,
   useTheme
 } from 'react-native-paper';
+import { __customFonts } from './fonts';
 
 export const lightTheme = {
   ...LightTheme,
@@ -10,6 +11,8 @@ export const lightTheme = {
     ...LightTheme.colors
   }
 };
+
+console.log(__customFonts);
 
 type AppTheme = typeof lightTheme;
 
