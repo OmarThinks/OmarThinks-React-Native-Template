@@ -1,3 +1,3 @@
-import { getTheme, setTheme } from './theme';
+import { getStoredTheme, setStoredTheme } from './theme';
 
-export { getTheme, setTheme };
+export { getStoredTheme, setStoredTheme };
