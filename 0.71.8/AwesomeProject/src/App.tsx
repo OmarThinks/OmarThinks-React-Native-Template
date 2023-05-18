@@ -1,12 +1,12 @@
-import React from 'react'
-import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native'
-import { PaperProvider } from 'react-native-paper'
-import { lightTheme } from '@theme'
+import React from 'react';
+import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
+import { lightTheme } from '@theme';
 
-function App (): React.JSX.Element {
+function App () {
   const backgroundStyle = {
     backgroundColor: 'white'
-  }
+  };
 
   return (
     <PaperProvider theme={lightTheme}>
@@ -22,7 +22,7 @@ function App (): React.JSX.Element {
         </ScrollView>
       </SafeAreaView>
     </PaperProvider>
-  )
+  );
 }
 
-export default App
+export default App;

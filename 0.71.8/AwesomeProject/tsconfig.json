@@ -4,10 +4,8 @@
     "jsx": "react-native",
     "baseUrl": ".",
     "paths": {
-      //"@root/*": ["./*"],
-      //"@app/*": ["./src/*"],
-      "@app": ["./src/App.tsx"],
       "@theme": ["./src/theme/index.tsx"]
+      // "@app": ["./src/App.tsx"], (only if needed)
     }
   },
   "exclude": ["node_modules"]
