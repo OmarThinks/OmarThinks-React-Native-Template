@@ -31,4 +31,4 @@ export const { setTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;
 
-export const mainThemeSelector = (state: RootState) => state.theme.value;
+export const themeSelector = (state: RootState) => state.theme.value;
