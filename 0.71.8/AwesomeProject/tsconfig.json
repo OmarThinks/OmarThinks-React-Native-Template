@@ -4,9 +4,22 @@
     "jsx": "react-native",
     "baseUrl": ".",
     "paths": {
-      "@root/*": ["./*"],
-      "@app/*": ["./src/*"]
+      //"@root/*": ["./*"],
+      "@app/*": ["./src/*"],
+      "@theme": ["./src/theme/index.tsx"]
     }
   },
   "exclude": ["node_modules"]
 }
+
+/*
+Generate a regex that 
+takes everything inside "src" expcept the compont folder
+
+
+
+
+
+
+
+*/

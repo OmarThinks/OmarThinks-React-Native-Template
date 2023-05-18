@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native'
 import { PaperProvider } from 'react-native-paper'
-import { lightTheme } from './src/theme'
+import { lightTheme } from '@theme'
 
 function App (): React.JSX.Element {
   const backgroundStyle = {
@@ -26,3 +26,11 @@ function App (): React.JSX.Element {
 }
 
 export default App
+
+/*
+Generate a regex that
+takes everything inside "src" expcept the "components" folder
+
+/src\/(?!components).*\/
+
+*/
