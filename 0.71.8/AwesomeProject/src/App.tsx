@@ -3,7 +3,7 @@ import { darkTheme, lightTheme } from '@theme';
 import React from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
-import Home from './screens/Home/Home';
+import { Home } from '@screens';
 
 const AppInsideRNP = () => {
   const theme = useSelector(themeSelector);

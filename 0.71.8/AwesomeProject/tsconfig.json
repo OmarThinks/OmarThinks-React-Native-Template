@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@theme": ["./src/theme/index.tsx"],
-      "@redux": ["./src/redux/index.tsx"]
+      "@redux": ["./src/redux/index.tsx"],
+      "@screens": ["./src/screens/index.tsx"]
       // "@app": ["./src/App.tsx"], (only if needed)
     }
   },
