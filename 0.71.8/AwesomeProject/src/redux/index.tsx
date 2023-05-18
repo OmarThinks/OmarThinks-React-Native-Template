@@ -1,3 +1,4 @@
+import { mainThemeSelector } from './features/theme/themeSlice';
 import { store } from './store';
 
-export { store };
+export { mainThemeSelector, store };

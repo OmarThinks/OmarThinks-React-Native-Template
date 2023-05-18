@@ -1,18 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import type { RootState } from 'src/redux/store';
 
 type MainTheme = 'light' | 'dark';
 
-export interface CounterState {
-  mainValue: MainTheme;
+export interface ThemeState {
+  mainTheme: MainTheme;
 }
 
-const initialState: CounterState = {
-  mainValue: 'light'
+const initialState: ThemeState = {
+  mainTheme: 'light'
 };
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const themeSlice = createSlice({
+  name: 'theme',
   initialState,
   reducers: {
     setTheme: (state, action: PayloadAction<MainTheme>) => {
@@ -20,12 +21,14 @@ export const counterSlice = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.mainValue = action.payload;
+      state.mainTheme = action.payload;
     }
   }
 });
 
 // Action creators are generated for each case reducer function
-export const { setTheme } = counterSlice.actions;
+export const { setTheme } = themeSlice.actions;
 
-export default counterSlice.reducer;
+export default themeSlice.reducer;
+
+export const mainThemeSelector = (state: RootState) => state.theme.mainTheme;

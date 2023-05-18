@@ -1,9 +1,9 @@
+import { store } from '@redux';
+import { lightTheme } from '@theme';
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
-import { PaperProvider, Button } from 'react-native-paper';
-import { lightTheme } from '@theme';
+import { Button, PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@redux';
 
 function AppWithoutRedux () {
   const backgroundStyle = {
