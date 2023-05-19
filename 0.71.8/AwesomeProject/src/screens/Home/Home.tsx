@@ -14,7 +14,7 @@ const Home = () => {
     dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
   };
 
-  console.log('Theme', theme);
+  // console.log('Theme', theme);
 
   return (
     <SafeAreaView
