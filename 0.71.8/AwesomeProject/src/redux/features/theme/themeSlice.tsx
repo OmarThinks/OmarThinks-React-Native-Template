@@ -1,7 +1,7 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice, Dispatch, AnyAction } from '@reduxjs/toolkit';
-import type { RootState } from 'src/redux/store';
+import { createSlice } from '@reduxjs/toolkit';
 import { setStoredTheme } from '@storage';
+import type { RootState } from 'src/redux/store';
 
 export type Theme = 'light' | 'dark';
 

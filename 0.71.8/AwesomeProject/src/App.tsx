@@ -6,23 +6,11 @@ import { darkTheme, lightTheme } from '@theme';
 import React from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
-import { getStoredTheme } from './storage/theme';
 
 const Stack = createNativeStackNavigator();
 
 const AppWithoutRedux = () => {
   const theme = useSelector(themeSelector);
-
-  React.useEffect(() => {
-    const logStoredTheme = async () => {
-      const storedTheme = await getStoredTheme();
-      console.log('storedTheme', storedTheme);
-
-      return await getStoredTheme();
-    };
-
-    logStoredTheme();
-  }, []);
 
   return (
     <PaperProvider theme={theme === 'light' ? lightTheme : darkTheme}>
