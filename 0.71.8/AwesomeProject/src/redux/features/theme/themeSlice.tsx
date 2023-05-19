@@ -1,6 +1,7 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, Dispatch, AnyAction } from '@reduxjs/toolkit';
 import type { RootState } from 'src/redux/store';
+import { setStoredTheme } from '@storage';
 
 export type Theme = 'light' | 'dark';
 
@@ -22,6 +23,7 @@ export const themeSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.value = action.payload;
+      setStoredTheme(action.payload);
     }
   }
 });
