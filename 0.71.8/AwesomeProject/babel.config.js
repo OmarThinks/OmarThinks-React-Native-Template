@@ -14,7 +14,8 @@ module.exports = {
           '@redux': './src/redux/index.tsx',
           '@screens': './src/screens/index.tsx',
           '@storage': './src/storage/index.tsx',
-          '@theme': './src/theme/index.tsx'
+          '@theme': './src/theme/index.tsx',
+          '@navigation': './src/navigation/index.tsx'
 
           // '@app': './src/App.tsx' (Only if needed)
         }
