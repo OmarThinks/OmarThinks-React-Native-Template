@@ -1,6 +1,5 @@
 # Tasks:
 
-- [ ]: Text Component
 - [ ]: Main Layout: (Has App Bar)
 - [ ]: Main Layout: (Scrollable)
 - [ ]: Components: appBar

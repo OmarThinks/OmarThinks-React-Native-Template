@@ -7,9 +7,11 @@ const AppBar = () => <AppBarOriginal />;
 const MainLayout = (
   ScreenComponent: React.FC,
   {
-    isScrollable = true
+    isScrollable = true,
+    hasAppBar = true
   }: {
     isScrollable?: boolean;
+    hasAppBar?: boolean;
   } = {}
 ) => {
   if (isScrollable) {
@@ -19,7 +21,7 @@ const MainLayout = (
   const InnerMainLayout = () => {
     return (
       <View>
-        <AppBar />
+        {hasAppBar && <AppBar />}
         <ScreenComponent />
       </View>
     );
