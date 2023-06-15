@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import { AppBar } from '@c';
 
 const MainLayout = (
   ScreenComponent: React.FC,
@@ -16,6 +17,7 @@ const MainLayout = (
   const InnerMainLayout = () => {
     return (
       <View>
+        <AppBar />
         <ScreenComponent />
       </View>
     );

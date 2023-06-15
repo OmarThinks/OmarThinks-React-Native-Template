@@ -1,5 +1,6 @@
 # Tasks:
 
+- [ ]: components: Module resolver
 - [ ]: Components : AppBar (Primitive)
 - [ ]: Main Layout: (Has App Bar)
 - [ ]: Main Layout: (Scrollable)
