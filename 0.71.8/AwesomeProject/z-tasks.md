@@ -1,5 +1,6 @@
 # Tasks:
 
+- [ ]: Text Component
 - [ ]: Components : AppBar (Primitive)
 - [ ]: Main Layout: (Has App Bar)
 - [ ]: Main Layout: (Scrollable)
@@ -7,3 +8,5 @@
 - [ ]: Components : TouchFiller
 - [ ]: Components: Icon
 - [ ]: Components: CircleIcon
+- [ ]: Side Drawer
+- [ ]: 3 Components screens

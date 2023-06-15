@@ -11,7 +11,7 @@ module.exports = {
       {
         root: ['.'],
         alias: {
-          '@c': './src/components/index.tsx',
+          '@components': './src/components/index.tsx',
           '@hoc': './src/hoc/index.tsx',
           '@redux': './src/redux/index.tsx',
           '@screens': './src/screens/index.tsx',

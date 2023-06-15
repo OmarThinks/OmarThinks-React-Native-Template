@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { AppBar } from '@c';
+import { AppBar as AppBarOriginal } from '@components';
+
+const AppBar = () => <AppBarOriginal />;
 
 const MainLayout = (
   ScreenComponent: React.FC,

@@ -6,8 +6,13 @@ const AppBar = () => {
   const colors = useAppTheme().colors;
 
   return (
-    <View style={{ height: 50, backgroundColor: 'red' }}>
-      <Text>AppBar</Text>
+    <View style={{ height: 50, backgroundColor: colors.appBarBg }}>
+      <Text
+        style={{
+          color: colors.normalText
+        }}>
+        AppBar
+      </Text>
     </View>
   );
 };
