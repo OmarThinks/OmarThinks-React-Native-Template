@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { View } from 'react-native';
 
 const MainLayout = (
   ScreenComponent: React.FC,
@@ -16,7 +16,6 @@ const MainLayout = (
   const InnerMainLayout = () => {
     return (
       <View>
-        <Text>MainLayout</Text>
         <ScreenComponent />
       </View>
     );
