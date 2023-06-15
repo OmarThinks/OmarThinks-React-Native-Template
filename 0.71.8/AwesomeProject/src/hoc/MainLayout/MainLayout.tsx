@@ -4,11 +4,15 @@ import React from 'react';
 const MainLayout = (
   ScreenComponent: React.FC,
   {
-    scrollable = true
+    isScrollable = true
   }: {
-    scrollable?: boolean;
-  }
+    isScrollable?: boolean;
+  } = {}
 ) => {
+  if (isScrollable) {
+    //
+  }
+
   const InnerMainLayout = () => {
     return (
       <View>

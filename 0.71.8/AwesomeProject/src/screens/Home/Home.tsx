@@ -4,6 +4,7 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
+import { MainLayout } from '@hoc';
 
 const Home = () => {
   const colors = useAppTheme().colors;
@@ -46,4 +47,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MainLayout(Home);
