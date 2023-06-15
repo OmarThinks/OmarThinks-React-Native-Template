@@ -1,22 +1,13 @@
 import { MainLayout } from '@hoc';
-import { setTheme, themeSelector } from '@redux';
+import { themeSelector } from '@redux';
 import { useAppTheme } from '@theme';
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
-import { useDispatch, useSelector } from 'react-redux';
-// import { AppBar } from '@components';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const colors = useAppTheme().colors;
-  const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
-
-  const toggleTheme = () => {
-    dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
-  };
-
-  // console.log('Theme', theme);
 
   return (
     <SafeAreaView
@@ -39,9 +30,6 @@ const Home = () => {
             backgroundColor: colors.appBg
           }}>
           <Text>Hey</Text>
-          <Button icon={'camera'} onPress={toggleTheme}>
-            Press me
-          </Button>
         </View>
       </ScrollView>
     </SafeAreaView>

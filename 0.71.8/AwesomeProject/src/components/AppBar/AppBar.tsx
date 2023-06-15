@@ -1,9 +1,17 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { setTheme, themeSelector } from '@redux';
 import { useAppTheme } from '@theme';
+import React from 'react';
+import { Text, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 const AppBar = () => {
   const colors = useAppTheme().colors;
+  const dispatch = useDispatch();
+  const theme = useSelector(themeSelector);
+
+  const toggleTheme = () => {
+    dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
     <View
@@ -35,7 +43,8 @@ const AppBar = () => {
         <Text
           style={{
             color: colors.normalText
-          }}>
+          }}
+          onPress={toggleTheme}>
           Theme
         </Text>
       </View>
