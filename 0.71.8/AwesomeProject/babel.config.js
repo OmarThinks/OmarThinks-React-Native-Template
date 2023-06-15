@@ -15,7 +15,8 @@ module.exports = {
           '@screens': './src/screens/index.tsx',
           '@storage': './src/storage/index.tsx',
           '@theme': './src/theme/index.tsx',
-          '@navigation': './src/navigation/index.tsx'
+          '@navigation': './src/navigation/index.tsx',
+          '@hoc': './src/hoc/index.tsx'
 
           // '@app': './src/App.tsx' (Only if needed)
         }
