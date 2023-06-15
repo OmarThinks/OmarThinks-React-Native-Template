@@ -4,7 +4,7 @@ import { useAppTheme } from '@theme';
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
 import { useSelector } from 'react-redux';
-import { Text } from 'react-native-paper';
+import { Text } from '@components';
 
 const Home = () => {
   const colors = useAppTheme().colors;
