@@ -5,7 +5,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
-const AppBar = () => {
+const AppBar = ({ title }: {title?: string}) => {
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
@@ -13,6 +13,8 @@ const AppBar = () => {
   const toggleTheme = () => {
     dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
   };
+
+  console.log('Title', title);
 
   return (
     <View
@@ -24,13 +26,24 @@ const AppBar = () => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
+        // flexGrow: 1,
+        // flexShrink: 1
       }}>
-      <View>
+      <View
+        style={{
+          flexDirection: 'row',
+          flexGrow: 1,
+          flexShrink: 1,
+          marginRight: 20
+        }}>
         <Text
           style={{
-            color: colors.normalText
-          }}>
-          AppBar
+            color: colors.normalText,
+            flexShrink: 1
+          }}
+          variant="v20"
+          numberOfLines={1}>
+          {title}
         </Text>
       </View>
       <View style={{ flexDirection: 'row' }}>
@@ -38,7 +51,7 @@ const AppBar = () => {
           Theme
         </Text>
 
-        <Text>Drawer</Text>
+        <Text style={{}}>Drawer</Text>
       </View>
     </View>
   );

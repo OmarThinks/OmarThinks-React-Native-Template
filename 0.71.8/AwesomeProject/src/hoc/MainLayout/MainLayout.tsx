@@ -5,29 +5,32 @@ import { useAppTheme } from '@theme';
 import { useSelector } from 'react-redux';
 import { themeSelector } from '@redux';
 
-const AppBar = () => <AppBarOriginal />;
+const AppBar = ({ title }: {title?: string}) => <AppBarOriginal title={title} />;
 
 const MainLayout = (
   ScreenComponent: React.FC,
   {
     isScrollable = true,
-    hasAppBar = true
+    hasAppBar = true,
+    title
   }: {
     isScrollable?: boolean;
     hasAppBar?: boolean;
+    title?: string;
   } = {}
 ) => {
   const InnerMainLayout = () => {
-    const appBar = hasAppBar && <AppBar />;
+    const appBar = hasAppBar && <AppBar title={title} />;
     const colors = useAppTheme().colors;
     const theme = useSelector(themeSelector);
 
+    console.log('Title', title);
+
     if (isScrollable) {
-      console.log('Hey bro');
       return (
         <SafeAreaView
           style={{
-            backgroundColor: 'blue',
+            backgroundColor: colors.appBg,
             minHeight: '100%'
           }}>
           <StatusBar
@@ -37,10 +40,10 @@ const MainLayout = (
           {appBar}
           <ScrollView
             style={{
-              flexGrow: 1,
+              flexGrow: 1
               // flexShrink: 1,
               // minHeight: '100%',
-              backgroundColor: 'red'
+              // backgroundColor: 'red'
             }}
             contentContainerStyle={{
               flexGrow: 1
@@ -64,10 +67,3 @@ const MainLayout = (
 };
 
 export default MainLayout;
-
-/*
-I want MainLayout to be used like this:
-
-return MainLayout(Home, {})
-
-*/

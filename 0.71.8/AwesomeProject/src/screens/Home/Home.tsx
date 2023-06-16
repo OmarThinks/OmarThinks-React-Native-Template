@@ -1,28 +1,23 @@
 import { Text } from '@components';
 import { MainLayout } from '@hoc';
-import { themeSelector } from '@redux';
-import { useAppTheme } from '@theme';
 import React from 'react';
-import { StatusBar, View } from 'react-native';
-import { useSelector } from 'react-redux';
+import { View } from 'react-native';
 
 const Home = () => {
-  const colors = useAppTheme().colors;
-  const theme = useSelector(themeSelector);
-
   return (
     <View
       style={{
         flexGrow: 1,
         alignSelf: 'stretch',
-        backgroundColor: 'green',
+        // backgroundColor: 'green',
         justifyContent: 'center',
-        alignItems: 'center',
-        height: 1000
+        alignItems: 'center'
       }}>
       <Text variant="v16">Hey</Text>
     </View>
   );
 };
 
-export default MainLayout(Home);
+export default MainLayout(Home, {
+  title: 'Home'
+});
