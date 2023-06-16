@@ -1,7 +1,8 @@
+import { Text } from '@components';
 import { setTheme, themeSelector } from '@redux';
 import { useAppTheme } from '@theme';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 const AppBar = () => {
@@ -33,20 +34,11 @@ const AppBar = () => {
         </Text>
       </View>
       <View style={{ flexDirection: 'row' }}>
-        <Text
-          style={{
-            color: colors.normalText,
-            marginRight: 10
-          }}>
-          Drawer
-        </Text>
-        <Text
-          style={{
-            color: colors.normalText
-          }}
-          onPress={toggleTheme}>
+        <Text style={{ marginRight: 10 }} onPress={toggleTheme}>
           Theme
         </Text>
+
+        <Text>Drawer</Text>
       </View>
     </View>
   );

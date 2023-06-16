@@ -1,10 +1,11 @@
 # Tasks:
 
-- [ ]: Main Layout: (Has App Bar)
 - [ ]: Main Layout: (Scrollable)
-- [ ]: Components: appBar
+- [ ]: Appbar: Title
+- [ ]: MainLayout: padding HZ and Vr
 - [ ]: Components : TouchFiller
 - [ ]: Components: Icon
 - [ ]: Components: CircleIcon
+- [ ]: Components: appBar
 - [ ]: Side Drawer
 - [ ]: 3 Components screens
