@@ -1,6 +1,6 @@
 # Tasks:
 
-- [ ]: Main Layout: (Scrollable)
+- [ ]: Main Layout: (not Scrollable)
 - [ ]: Appbar: Title
 - [ ]: MainLayout: padding HZ and Vr
 - [ ]: Components : TouchFiller

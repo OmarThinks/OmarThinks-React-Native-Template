@@ -53,7 +53,7 @@ const MainLayout = (
       );
     }
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         {appBar}
         <ScreenComponent />
       </View>
