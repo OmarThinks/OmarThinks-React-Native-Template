@@ -4,6 +4,7 @@ import { View, ScrollView, SafeAreaView, StatusBar } from 'react-native';
 import { useAppTheme } from '@theme';
 import { useSelector } from 'react-redux';
 import { themeSelector } from '@redux';
+import { NavigationNameType } from '@navigation';
 
 const AppBar = ({ title }: {title?: string}) => <AppBarOriginal title={title} />;
 
@@ -14,13 +15,15 @@ const MainLayout = (
     hasAppBar = true,
     title = '',
     hzPadding = 15,
-    vrPadding = 15
+    vrPadding = 15,
+    prevScreen
   }: {
     isScrollable?: boolean;
     hasAppBar?: boolean;
     title?: string;
     hzPadding?: number;
     vrPadding?: number;
+    prevScreen?: NavigationNameType;
   } = {}
 ) => {
   const InnerMainLayout = () => {
