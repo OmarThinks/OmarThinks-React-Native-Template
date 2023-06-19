@@ -5,16 +5,23 @@ import React from 'react';
 import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList, navigationNames } from '@navigation';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+
 const AppBar = ({ title }: {title?: string}) => {
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
 
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   const toggleTheme = () => {
     dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
   };
 
-  console.log('Title', title);
+  // console.log('Title', title);
 
   return (
     <View
@@ -47,10 +54,16 @@ const AppBar = ({ title }: {title?: string}) => {
         </Text>
       </View>
       <View style={{ flexDirection: 'row' }}>
+        <Text
+          style={{ marginRight: 10 }}
+          onPress={() => {
+            navigation.navigate(navigationNames.Components1);
+          }}>
+          Components 1
+        </Text>
         <Text style={{ marginRight: 10 }} onPress={toggleTheme}>
           Theme
         </Text>
-
         <Text style={{}}>Drawer</Text>
       </View>
     </View>

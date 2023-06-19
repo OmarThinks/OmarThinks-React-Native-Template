@@ -11,4 +11,6 @@ const Components1 = () => {
   );
 };
 
-export default MainLayout(Components1);
+export default MainLayout(Components1, {
+  title: 'Components1'
+});
