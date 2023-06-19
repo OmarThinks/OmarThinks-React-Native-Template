@@ -1,14 +1,10 @@
+import { RootStack } from '@navigation';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { store, themeSelector } from '@redux';
-import { Home, Splash } from '@screens';
 import { darkTheme, lightTheme } from '@theme';
 import React from 'react';
 import { PaperProvider } from 'react-native-paper';
 import { Provider as ReduxProvider, useSelector } from 'react-redux';
-import { RootStackParamList } from '@navigation';
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppWithoutRedux = () => {
   const theme = useSelector(themeSelector);
@@ -16,12 +12,7 @@ const AppWithoutRedux = () => {
   return (
     <PaperProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="Splash"
-          screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Splash" component={Splash} />
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
+        <RootStack />
       </NavigationContainer>
     </PaperProvider>
   );
