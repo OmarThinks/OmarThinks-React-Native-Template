@@ -28,7 +28,7 @@ const MainLayout = (
     const colors = useAppTheme().colors;
     const theme = useSelector(themeSelector);
 
-    console.log('Title', title);
+    // console.log('Title', title);
 
     if (isScrollable) {
       return (

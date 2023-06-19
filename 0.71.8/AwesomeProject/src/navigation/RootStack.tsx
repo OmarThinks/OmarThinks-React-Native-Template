@@ -1,9 +1,11 @@
-import React from 'react';
-import { Home, Splash } from '@screens';
-
 // https://reactnavigation.org/docs/typescript/
 
+export const navigationNames = {
+  Home: 'Home',
+  Splash: 'Splash'
+} as const;
+
 export type RootStackParamList = {
-  Home: undefined;
-  Splash: undefined;
+  [navigationNames.Home]: undefined;
+  [navigationNames.Splash]: undefined;
 };
