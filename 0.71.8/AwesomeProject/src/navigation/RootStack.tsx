@@ -1,6 +1,6 @@
-import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home, Splash } from '@screens';
+import React from 'react';
 
 // https://reactnavigation.org/docs/typescript/
 
@@ -8,6 +8,8 @@ export const navigationNames = {
   Home: 'Home',
   Splash: 'Splash'
 } as const;
+
+export type NavigationNameType = keyof typeof navigationNames;
 
 export type RootStackParamList = {
   [navigationNames.Home]: undefined;
