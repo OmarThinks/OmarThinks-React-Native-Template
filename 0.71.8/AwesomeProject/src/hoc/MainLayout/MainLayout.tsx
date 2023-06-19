@@ -12,11 +12,15 @@ const MainLayout = (
   {
     isScrollable = true,
     hasAppBar = true,
-    title
+    title = '',
+    hzPadding = 15,
+    vrPadding = 15
   }: {
     isScrollable?: boolean;
     hasAppBar?: boolean;
     title?: string;
+    hzPadding?: number;
+    vrPadding?: number;
   } = {}
 ) => {
   const InnerMainLayout = () => {
@@ -50,7 +54,15 @@ const MainLayout = (
               // flexShrink: 1
               // minHeight: '100%'
             }}>
-            <ScreenComponent />
+            <View
+              style={{
+                marginHorizontal: hzPadding,
+                marginVertical: vrPadding,
+                flexGrow: 1,
+                alignSelf: 'stretch'
+              }}>
+              <ScreenComponent />
+            </View>
           </ScrollView>
         </SafeAreaView>
       );

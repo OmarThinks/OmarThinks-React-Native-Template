@@ -1,7 +1,5 @@
 # Tasks:
 
-- [ ]: AppBar: Title
-- [ ]: MainLayout: padding HZ and Vr
 - [ ]: Components : TouchFiller
 - [ ]: Components: Icon
 - [ ]: Components: CircleIcon
