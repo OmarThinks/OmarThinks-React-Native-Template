@@ -1,6 +1,5 @@
 # Tasks:
 
-- [ ]: Add Text to components screen
 - [ ]: Components : TouchFiller
 - [ ]: Components: Icon
 - [ ]: Components: CircleIcon
