@@ -38,7 +38,8 @@ const MainLayout = (
         <SafeAreaView
           style={{
             backgroundColor: colors.appBg,
-            minHeight: '100%'
+            flex: 1
+            // minHeight: '100%'
           }}>
           <StatusBar
             barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
