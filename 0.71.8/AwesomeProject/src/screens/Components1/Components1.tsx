@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import React from 'react';
-import { Text, TouchFiller, Icon } from '@components';
+import { Text, TouchFiller, Icon, CircleIcon } from '@components';
 import { MainLayout } from '@hoc';
 
 const HR = ({ height = 2 }: {height?: number}) => {
@@ -117,6 +117,10 @@ const Components1 = () => {
           margin: 20
         }}
       />
+
+      <Header title="CircleIcon" />
+
+      <CircleIcon />
     </View>
   );
 };
