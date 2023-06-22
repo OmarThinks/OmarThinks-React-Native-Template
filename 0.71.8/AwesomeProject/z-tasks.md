@@ -1,6 +1,5 @@
 # Tasks:
 
-- [ ]: Components : LoadingFiller
 - [ ]: Components: Icon
 - [ ]: Components: CircleIcon
 - [ ]: Components: appBar
