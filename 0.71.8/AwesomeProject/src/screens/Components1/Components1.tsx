@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import React from 'react';
-import { Text, TouchFiller } from '@components';
+import { Text, TouchFiller, Icon } from '@components';
 import { MainLayout } from '@hoc';
 
 const HR = ({ height = 2 }: {height?: number}) => {
@@ -103,6 +103,10 @@ const Components1 = () => {
           <TouchFiller style={{ borderRadius: 20 }} onPress={() => {}} />
         </View>
       </View>
+
+      <Header title="Icon" />
+
+      <Icon />
     </View>
   );
 };
