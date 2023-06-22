@@ -120,7 +120,20 @@ const Components1 = () => {
 
       <Header title="CircleIcon" />
 
-      <CircleIcon />
+      <CircleIcon
+        size={40}
+        iconName="comments"
+        color={'black'}
+        onPress={() => {}}
+      />
+      <CircleIcon size={40} iconName="comments" color={'black'} />
+      <CircleIcon
+        size={40}
+        iconName="comments"
+        color={'black'}
+        borderWidth={2}
+        onPress={() => {}}
+      />
     </View>
   );
 };
