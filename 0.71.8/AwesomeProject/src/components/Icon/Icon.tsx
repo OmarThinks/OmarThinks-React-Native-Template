@@ -1,15 +1,34 @@
-import { View } from 'react-native';
 import React from 'react';
-import { Text } from '@components';
+import { ViewStyle } from 'react-native';
+import FAIcon from 'react-native-vector-icons/FontAwesome5';
 
-import FAIcon from 'react-native-vector-icons/FontAwesome';
-
-const Icon = () => {
+const Icon = ({
+  size,
+  color,
+  name,
+  solid = false,
+  light = false,
+  brand = false,
+  style = {}
+}: {
+  size: number;
+  color: string;
+  name: string;
+  style?: ViewStyle;
+  solid?: boolean;
+  light?: boolean;
+  brand?: boolean;
+}) => {
   return (
-    <View>
-      <Text>Icon</Text>
-      <FAIcon name="rocket" size={30} color="#900" />
-    </View>
+    <FAIcon
+      name={name}
+      size={size}
+      color={color}
+      solid={solid}
+      light={light}
+      brand={brand}
+      style={style}
+    />
   );
 };
 

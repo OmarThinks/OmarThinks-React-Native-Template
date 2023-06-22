@@ -106,7 +106,17 @@ const Components1 = () => {
 
       <Header title="Icon" />
 
-      <Icon />
+      <Icon size={20} name="comments" color="lime" />
+      <Icon size={20} name="comments" color="lime" solid />
+      <Icon size={40} name="comments" color="lime" />
+      <Icon
+        size={20}
+        name="comments"
+        color="lime"
+        style={{
+          margin: 20
+        }}
+      />
     </View>
   );
 };
