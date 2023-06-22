@@ -1,6 +1,5 @@
 # Tasks:
 
-- [ ]: Components: Icon
 - [ ]: Components: CircleIcon
 - [ ]: Components: appBar
 - [ ]: Side Drawer
