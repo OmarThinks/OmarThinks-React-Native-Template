@@ -134,6 +134,15 @@ const Components1 = () => {
         borderWidth={2}
         onPress={() => {}}
       />
+
+      <CircleIcon
+        size={40}
+        iconName="comments"
+        color={'black'}
+        borderWidth={2}
+        onPress={() => {}}
+        bgColor="green"
+      />
     </View>
   );
 };

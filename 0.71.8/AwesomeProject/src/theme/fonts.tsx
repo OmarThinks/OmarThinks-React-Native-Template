@@ -1,5 +1,7 @@
 import { DefaultTheme } from 'react-native-paper';
 
+
+
 export const customFonts = {
   ...DefaultTheme.fonts,
   v1: {
