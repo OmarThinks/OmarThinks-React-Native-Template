@@ -18,36 +18,12 @@ const Box = () => {
 */
 const Home = () => {
   return (
-    <View
-      style={{
-        flexGrow: 1,
-        alignSelf: 'stretch',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View className="grow self-stretch justify-center items-center">
       <Text variant="v16">Hey</Text>
-      <View
-        style={{alignSelf: 'stretch', backgroundColor: 'red', height: 100}}
-      />
+      <View className="self-stretch h-[100] bg-red-600" />
 
       <Text className="justify-center font-bold">Hey</Text>
       <Text className=" bg-red-500">Hey</Text>
-
-      {/*
-      <View
-        style={{
-          flexDirection: 'row',
-          gap: 10,
-          flexWrap: 'wrap',
-          backgroundColor: 'red',
-          alignSelf: 'center'
-        }}>
-        <Box />
-        <Box />
-        <Box />
-        <Box />
-      </View>
-      */}
     </View>
   );
 };
@@ -55,8 +31,3 @@ const Home = () => {
 export default MainLayout(Home, {
   title: 'Home',
 });
-
-/*
-
-
-*/
