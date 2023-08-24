@@ -31,7 +31,7 @@ const Home = () => {
       />
 
       <Text className="justify-center font-bold">Hey</Text>
-      <Text className="justify-end">Hey</Text>
+      <Text className=" bg-red-500">Hey</Text>
 
       {/*
       <View
