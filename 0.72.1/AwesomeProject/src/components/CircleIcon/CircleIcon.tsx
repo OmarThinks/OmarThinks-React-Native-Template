@@ -30,7 +30,7 @@ const CircleIcon = ({
 
   return (
     <View
-      className={`overflow-hidden content-center items-center ${className}`}
+      className={`overflow-hidden justify-center items-center ${className}`}
       style={{
         width: size,
         height: size,
