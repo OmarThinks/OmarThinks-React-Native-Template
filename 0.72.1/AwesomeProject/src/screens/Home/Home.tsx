@@ -1,7 +1,7 @@
-import { Text } from '@components';
-import { MainLayout } from '@hoc';
+import {Text} from '@components';
+import {MainLayout} from '@hoc';
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 
 /*
 const Box = () => {
@@ -23,12 +23,15 @@ const Home = () => {
         flexGrow: 1,
         alignSelf: 'stretch',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}>
       <Text variant="v16">Hey</Text>
       <View
-        style={{ alignSelf: 'stretch', backgroundColor: 'red', height: 100 }}
+        style={{alignSelf: 'stretch', backgroundColor: 'red', height: 100}}
       />
+
+      <Text className="justify-center font-bold">Hey</Text>
+      <Text className="justify-end">Hey</Text>
 
       {/*
       <View
@@ -50,5 +53,10 @@ const Home = () => {
 };
 
 export default MainLayout(Home, {
-  title: 'Home'
+  title: 'Home',
 });
+
+/*
+
+
+*/
