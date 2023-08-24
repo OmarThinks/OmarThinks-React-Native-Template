@@ -6,10 +6,9 @@ import {MainLayout} from '@hoc';
 const HR = ({height = 2}: {height?: number}) => {
   return (
     <View
+      className="bg-black my-3"
       style={{
         height,
-        backgroundColor: 'black',
-        marginVertical: 10,
       }}
     />
   );
@@ -84,23 +83,17 @@ const Components1 = () => {
 
       <Header title="TouchFiller" />
       <View>
-        <View style={{margin: 5, borderRadius: 20, backgroundColor: '#0df'}}>
-          <Text style={{margin: 20}}>Pressable</Text>
-          <TouchFiller style={{borderRadius: 20}} onPress={() => {}} />
+        <View className="m-1 rounded-full bg-cyan-300">
+          <Text className="m-5">Pressable</Text>
+          <TouchFiller className="rounded-full" onPress={() => {}} />
         </View>
-        <View style={{margin: 5, borderRadius: 20, backgroundColor: '#fdf'}}>
-          <Text style={{margin: 20}}>Not Pressable</Text>
-          <TouchFiller style={{borderRadius: 20}} />
+        <View className="m-1 rounded-full bg-gray-400">
+          <Text className="m-5">Not Pressable</Text>
+          <TouchFiller className="rounded-full" />
         </View>
-        <View
-          style={{
-            margin: 5,
-            borderRadius: 20,
-            backgroundColor: '#fdf',
-            padding: 15,
-          }}>
-          <Text style={{margin: 20}}>{"Don't use with padding"}</Text>
-          <TouchFiller style={{borderRadius: 20}} onPress={() => {}} />
+        <View className="m-1 rounded-[20px] bg-gray-400 p-4">
+          <Text className="m-5">{"Don't use with padding"}</Text>
+          <TouchFiller className="rounded-[20px]" onPress={() => {}} />
         </View>
       </View>
 
@@ -109,14 +102,7 @@ const Components1 = () => {
       <Icon size={20} name="comments" color="lime" />
       <Icon size={20} name="comments" color="lime" solid />
       <Icon size={40} name="comments" color="lime" />
-      <Icon
-        size={20}
-        name="comments"
-        color="lime"
-        style={{
-          margin: 20,
-        }}
-      />
+      <Icon className="m-5" size={20} name="comments" color="lime" />
 
       <Header title="CircleIcon" />
 
@@ -142,6 +128,24 @@ const Components1 = () => {
         borderWidth={2}
         onPress={() => {}}
         bgColor="green"
+      />
+
+      <View
+        style={{
+          alignSelf: 'stretch',
+          height: 40,
+          backgroundColor: 'red',
+          borderRadius: 16,
+        }}
+        // This works
+      />
+      <View
+        className="self-stretch h-10 bg-red-500 rounded-[16px]"
+        // This works
+      />
+      <View
+        className="self-stretch h-10 bg-red-500 rounded-[16]"
+        // This doesn't work
       />
     </View>
   );
