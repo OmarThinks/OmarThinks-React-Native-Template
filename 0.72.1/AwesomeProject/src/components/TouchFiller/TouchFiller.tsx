@@ -1,34 +1,26 @@
 import React from 'react';
-import {View, ViewStyle} from 'react-native';
+import {View} from 'react-native';
 import {TouchableRipple} from 'react-native-paper';
 
 const TouchFiller = ({
-  style = {},
+  className = '',
   onPress,
   zIndex = 1,
+  borderRadius = 0,
 }: {
-  style?: ViewStyle;
+  className?: string;
   onPress?: () => void;
   zIndex?: number;
+  borderRadius?: number;
 }) => {
-  const borderRadius = style.borderRadius || 0;
-
   return (
     <View
+      className={`overflow-hidden absolute h-full w-full ${className}`}
       style={{
-        overflow: 'hidden',
         borderRadius,
-        position: 'absolute',
         zIndex,
-        width: '100%',
-        height: '100%',
       }}>
-      <TouchableRipple
-        style={{
-          flexGrow: 1,
-          alignSelf: 'stretch',
-        }}
-        onPress={onPress}>
+      <TouchableRipple className="grow self-stretch" onPress={onPress}>
         <View />
       </TouchableRipple>
     </View>

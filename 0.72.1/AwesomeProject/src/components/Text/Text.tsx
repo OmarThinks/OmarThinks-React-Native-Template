@@ -9,7 +9,7 @@ const TextInner = customText<fontVariants>();
 const Text = ({
   children,
   variant,
-  className,
+  className = '',
   ...props
 }: TextProps<fontVariants>) => {
   const colors = useAppTheme().colors;

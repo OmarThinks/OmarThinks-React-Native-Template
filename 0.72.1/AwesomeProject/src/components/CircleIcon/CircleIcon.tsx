@@ -1,6 +1,6 @@
 import {Icon, TouchFiller} from '@components';
 import React from 'react';
-import {View, ViewStyle} from 'react-native';
+import {View} from 'react-native';
 
 const CircleIcon = ({
   size,
@@ -8,7 +8,7 @@ const CircleIcon = ({
   iconName,
 
   bgColor = 'transparent',
-  style = {},
+  className = '',
   onPress,
   borderWidth = 0,
   borderColor,
@@ -19,7 +19,7 @@ const CircleIcon = ({
   iconName: string;
 
   bgColor?: string;
-  style?: ViewStyle;
+  className?: string;
   onPress?: () => void;
   borderWidth?: number;
   borderColor?: string;
@@ -30,6 +30,7 @@ const CircleIcon = ({
 
   return (
     <View
+      className={`overflow-hidden content-center items-center ${className}`}
       style={{
         width: size,
         height: size,
@@ -37,10 +38,6 @@ const CircleIcon = ({
         borderColor,
         backgroundColor: bgColor,
         borderRadius: size / 2,
-        overflow: 'hidden',
-        justifyContent: 'center',
-        alignItems: 'center',
-        ...style,
       }}>
       <TouchFiller onPress={onPress} />
       <Icon size={iconSize} name={iconName} color={color} />
