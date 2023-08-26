@@ -1,4 +1,4 @@
-import {Text} from '@components';
+import {CircleIcon, Text} from '@components';
 import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
@@ -25,7 +25,17 @@ const AppBar = ({title}: {title?: string}) => {
     <View
       className="h-[50] px-2 flex-row items-center justify-between self-stretch"
       style={{backgroundColor: colors.appBarBg}}>
-      <View className="flex-row grow shrink mr-5">
+      <View className="flex-row grow shrink mr-5 items-center bg-slate-500 self-stretch">
+        <CircleIcon
+          size={40}
+          iconName="comments"
+          color={'black'}
+          borderWidth={2}
+          onPress={() => {}}
+          bgColor="green"
+          className="rounded-[2px]"
+          //style={{marginRight: 12}}
+        />
         <Text
           className="shrink"
           style={{color: colors.normalText}}

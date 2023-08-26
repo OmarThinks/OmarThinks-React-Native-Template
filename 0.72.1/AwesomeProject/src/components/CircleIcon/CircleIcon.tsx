@@ -1,6 +1,6 @@
 import {Icon, TouchFiller} from '@components';
 import React from 'react';
-import {View} from 'react-native';
+import {View, ViewStyle} from 'react-native';
 
 const CircleIcon = ({
   size,
@@ -13,6 +13,7 @@ const CircleIcon = ({
   borderWidth = 0,
   borderColor,
   iconSize,
+  style = {},
 }: {
   size: number;
   color: string;
@@ -24,6 +25,7 @@ const CircleIcon = ({
   borderWidth?: number;
   borderColor?: string;
   iconSize?: number;
+  style?: ViewStyle;
 }) => {
   iconSize ??= size / 2;
   borderColor ??= color;
@@ -38,6 +40,7 @@ const CircleIcon = ({
         borderColor,
         backgroundColor: bgColor,
         borderRadius: size / 2,
+        ...style,
       }}>
       <TouchFiller onPress={onPress} />
       <Icon size={iconSize} name={iconName} color={color} />

@@ -10,6 +10,7 @@ const Text = ({
   children,
   variant,
   className = '',
+  style = {},
   ...props
 }: TextProps<fontVariants>) => {
   const colors = useAppTheme().colors;
@@ -18,7 +19,7 @@ const Text = ({
     <TextInner
       {...props}
       className={className}
-      style={[{color: colors.normalText}]}
+      style={[style, {color: colors.normalText}]}
       variant={variant}>
       {children}
     </TextInner>
