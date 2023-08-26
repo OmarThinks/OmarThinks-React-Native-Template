@@ -3,21 +3,23 @@ import {View, ViewStyle} from 'react-native';
 import {TouchableRipple} from 'react-native-paper';
 
 const TouchFiller = ({
-  className = '',
+  _className = '',
   onPress,
   zIndex = 1,
   borderRadius = 0,
   style = {},
 }: {
-  className?: string;
+  _className?: string;
   onPress?: () => void;
   zIndex?: number;
   borderRadius?: number;
   style?: ViewStyle;
 }) => {
+  console.log('cn: ' + _className);
+
   return (
     <View
-      className={`overflow-hidden absolute h-full w-full ${className}`}
+      className={`overflow-hidden absolute h-full w-full ${_className}`}
       style={{
         borderRadius,
         zIndex,

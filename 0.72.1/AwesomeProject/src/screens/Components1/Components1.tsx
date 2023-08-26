@@ -85,15 +85,15 @@ const Components1 = () => {
       <View>
         <View className="m-1 rounded-full bg-cyan-300">
           <Text className="m-5">Pressable</Text>
-          <TouchFiller className="rounded-full" onPress={() => {}} />
+          <TouchFiller _className="rounded-full" onPress={() => {}} />
         </View>
         <View className="m-1 rounded-full bg-gray-400">
           <Text className="m-5">Not Pressable</Text>
-          <TouchFiller className="rounded-full" />
+          <TouchFiller _className="rounded-full" />
         </View>
         <View className="m-1 rounded-[20px] bg-gray-400 p-4">
           <Text className="m-5">{"Don't use with padding"}</Text>
-          <TouchFiller className="rounded-[20px]" onPress={() => {}} />
+          <TouchFiller _className="rounded-[20px]" onPress={() => {}} />
         </View>
       </View>
 
@@ -102,7 +102,7 @@ const Components1 = () => {
       <Icon size={20} name="comments" color="lime" />
       <Icon size={20} name="comments" color="lime" solid />
       <Icon size={40} name="comments" color="lime" />
-      <Icon className="m-5" size={20} name="comments" color="lime" />
+      <Icon _className="m-5" size={20} name="comments" color="lime" />
 
       <Header title="CircleIcon" />
 

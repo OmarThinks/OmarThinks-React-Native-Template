@@ -8,7 +8,7 @@ const CircleIcon = ({
   iconName,
 
   bgColor = 'transparent',
-  className = '',
+  _className = '',
   onPress,
   borderWidth = 0,
   borderColor,
@@ -20,7 +20,7 @@ const CircleIcon = ({
   iconName: string;
 
   bgColor?: string;
-  className?: string;
+  _className?: string;
   onPress?: () => void;
   borderWidth?: number;
   borderColor?: string;
@@ -32,7 +32,7 @@ const CircleIcon = ({
 
   return (
     <View
-      className={`overflow-hidden justify-center items-center ${className}`}
+      className={`overflow-hidden justify-center items-center ${_className}`}
       style={{
         width: size,
         height: size,
