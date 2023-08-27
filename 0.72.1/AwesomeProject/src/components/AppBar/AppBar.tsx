@@ -11,10 +11,10 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 const AppBar = ({
   title,
-  hasBackButton = true,
+  hasBackButton,
 }: {
   title?: string;
-  hasBackButton?: boolean;
+  hasBackButton: boolean;
 }) => {
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const AppBar = ({
 
   return (
     <View
-      className="h-[50] px-2 flex-row items-center justify-between self-stretch"
+      className="h-[50] px-2.5 flex-row items-center justify-between self-stretch"
       style={{backgroundColor: colors.appBarBg}}>
       <View className="flex-row grow shrink mr-5 items-center self-stretch">
         {hasBackButton && (
