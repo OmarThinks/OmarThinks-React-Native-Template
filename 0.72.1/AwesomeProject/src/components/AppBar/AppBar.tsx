@@ -2,7 +2,7 @@ import {CircleIcon, Text} from '@components';
 import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Modal, Portal, Button, PaperProvider} from 'react-native-paper';
 
@@ -29,8 +29,6 @@ const AppBar = ({
   };
 
   const [modalVisible, setModalVisible] = React.useState(false);
-
-  const containerStyle = {backgroundColor: 'white', padding: 20};
 
   return (
     <View
@@ -96,8 +94,21 @@ const AppBar = ({
           <Modal
             visible={modalVisible}
             onDismiss={() => setModalVisible(false)}
-            contentContainerStyle={containerStyle}>
-            <Text>Example Modal. Click outside this area to dismiss.</Text>
+            contentContainerStyle={{
+              width: '80%',
+              alignSelf: 'flex-start',
+              flexGrow: 1,
+              backgroundColor: colors.appBg,
+            }}>
+            <ScrollView>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+              <Text className="mb-32">Example Modal</Text>
+            </ScrollView>
           </Modal>
         </Portal>
       </View>
