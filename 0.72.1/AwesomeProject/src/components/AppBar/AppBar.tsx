@@ -9,7 +9,13 @@ import {RootStackParamList, navigationNames} from '@navigation';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const AppBar = ({title}: {title?: string}) => {
+const AppBar = ({
+  title,
+  hasBackButton = false,
+}: {
+  title?: string;
+  hasBackButton?: boolean;
+}) => {
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
@@ -33,8 +39,18 @@ const AppBar = ({title}: {title?: string}) => {
           borderWidth={2}
           onPress={() => {}}
           bgColor="green"
-          className="rounded-[2px]"
-          //style={{marginRight: 12}}
+          className="mr-4 ml-3"
+          style={{marginRight: 12}}
+        />
+        <CircleIcon
+          size={40}
+          iconName="comments"
+          color={'black'}
+          borderWidth={2}
+          onPress={() => {}}
+          bgColor="green"
+          className="mx-4"
+          style={{marginRight: 12}}
         />
         <Text
           className="shrink"
@@ -50,7 +66,7 @@ const AppBar = ({title}: {title?: string}) => {
           onPress={() => {
             navigation.navigate(navigationNames.Components1);
           }}>
-          Components 1
+          C 1
         </Text>
         <Text className="mr-2" onPress={toggleTheme}>
           Theme

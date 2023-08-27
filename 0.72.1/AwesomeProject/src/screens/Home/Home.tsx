@@ -1,4 +1,4 @@
-import {Text} from '@components';
+import {CircleIcon, Text} from '@components';
 import {MainLayout} from '@hoc';
 import React from 'react';
 import {View} from 'react-native';
@@ -13,6 +13,16 @@ const Home = () => {
 
       <Text className="justify-center font-bold">Hey</Text>
       <Text className={`bg-green-500 ${a}`}>Hey</Text>
+      <Text className="mt-5 bg-slate-600">Hi</Text>
+      <CircleIcon
+        size={40}
+        iconName="comments"
+        color={'black'}
+        borderWidth={2}
+        onPress={() => {}}
+        //style={{marginTop: 200}}
+        className="mt-5"
+      />
     </View>
   );
 };

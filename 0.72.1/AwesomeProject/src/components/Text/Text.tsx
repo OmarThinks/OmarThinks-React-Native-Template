@@ -14,6 +14,9 @@ const Text = ({
 }: TextProps<fontVariants>) => {
   const colors = useAppTheme().colors;
 
+  console.log('Text');
+  console.log('style:  ' + JSON.stringify(style));
+
   return (
     <TextInner
       {...props}
