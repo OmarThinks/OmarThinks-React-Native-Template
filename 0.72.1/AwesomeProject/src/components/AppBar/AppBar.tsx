@@ -55,18 +55,39 @@ const AppBar = ({
           {title}
         </Text>
       </View>
-      <View className="flex-row">
-        <Text
-          className="mr-2"
+      <View className="flex-row items-center">
+        <CircleIcon
+          size={40}
+          iconName={'sitemap'}
+          color={colors.normalText}
+          borderWidth={2}
           onPress={() => {
             navigation.navigate(navigationNames.Components1);
-          }}>
-          C 1
-        </Text>
-        <Text className="mr-2" onPress={toggleTheme}>
-          Theme
-        </Text>
-        <Text style={{}}>Drawer</Text>
+          }}
+          className="ml-1.5"
+        />
+
+        <CircleIcon
+          size={40}
+          iconName={theme === 'light' ? 'moon' : 'sun'}
+          color={colors.normalText}
+          borderWidth={2}
+          onPress={toggleTheme}
+          className="ml-1.5"
+        />
+
+        <CircleIcon
+          size={40}
+          iconName="bars"
+          color={colors.normalText}
+          borderWidth={2}
+          onPress={() => {
+            try {
+              // What to do?
+            } catch (error) {}
+          }}
+          className="ml-1.5"
+        />
       </View>
     </View>
   );
