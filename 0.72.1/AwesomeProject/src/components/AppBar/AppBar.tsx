@@ -4,6 +4,7 @@ import {useAppTheme} from '@theme';
 import React from 'react';
 import {View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+import {Modal, Portal, Button, PaperProvider} from 'react-native-paper';
 
 import {RootStackParamList, navigationNames} from '@navigation';
 import {useNavigation} from '@react-navigation/native';
@@ -26,6 +27,10 @@ const AppBar = ({
   const toggleTheme = () => {
     dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
   };
+
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  const containerStyle = {backgroundColor: 'white', padding: 20};
 
   return (
     <View
@@ -81,10 +86,20 @@ const AppBar = ({
           onPress={() => {
             try {
               // What to do?
+              setModalVisible(true);
             } catch (error) {}
           }}
           className="ml-1.5"
         />
+
+        <Portal>
+          <Modal
+            visible={modalVisible}
+            onDismiss={() => setModalVisible(false)}
+            contentContainerStyle={containerStyle}>
+            <Text>Example Modal. Click outside this area to dismiss.</Text>
+          </Modal>
+        </Portal>
       </View>
     </View>
   );
