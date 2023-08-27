@@ -19,11 +19,13 @@ const TouchFiller = ({
   return (
     <View
       className={'overflow-hidden absolute h-full w-full'}
-      style={{
-        borderRadius,
-        zIndex,
-        ...style,
-      }}>
+      style={[
+        {
+          borderRadius,
+          zIndex,
+        },
+        style,
+      ]}>
       <TouchableRipple className="grow self-stretch" onPress={onPress}>
         <View />
       </TouchableRipple>
