@@ -36,7 +36,7 @@ const AppBar = ({
           <CircleIcon
             size={40}
             iconName="arrow-left"
-            color={'black'}
+            color={colors.normalText}
             borderWidth={2}
             onPress={() => {
               try {
