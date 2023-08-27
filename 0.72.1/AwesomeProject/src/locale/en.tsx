@@ -1,5 +1,5 @@
 const en = {
-  homeScreen: 'Home',
+  'home.screen': 'Home Screen',
 };
 
 export default en;

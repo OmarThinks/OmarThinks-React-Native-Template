@@ -1,7 +1,7 @@
 import en from './en';
 
 const ar: typeof en = {
-  homeScreen: 'الصفحة الرئيسية',
+  'home.screen': 'الصفحة الرئيسية',
 };
 
 export default ar;

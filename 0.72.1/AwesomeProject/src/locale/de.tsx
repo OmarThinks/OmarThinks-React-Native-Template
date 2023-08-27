@@ -1,7 +1,7 @@
 import en from './en';
 
 const de: typeof en = {
-  homeScreen: 'Startbildschirm',
+  'home.screen': 'Startbildschirm',
 };
 
 export default de;
