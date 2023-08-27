@@ -141,9 +141,13 @@ const DrawerItem = ({
   setModalVisible: (visible: boolean) => void;
 }) => {
   const colors = useAppTheme().colors;
+  const theme = useSelector(themeSelector);
+
+  const borderColor = theme === 'light' ? 'border-black' : 'border-white';
 
   return (
-    <View className="border-red-400 border-2 m-2 rounded-[15px]  overflow-hidden">
+    <View
+      className={`${borderColor} border-2 m-2 rounded-[15px]  overflow-hidden`}>
       <View className="flex-row items-center p-2">
         <CircleIcon
           size={40}
