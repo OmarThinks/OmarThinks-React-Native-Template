@@ -1,10 +1,10 @@
-import {CircleIcon, Text} from '@components';
+import {CircleIcon, Text, TouchFiller} from '@components';
 import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
 import {ScrollView, View} from 'react-native';
+import {Modal, Portal} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
-import {Modal, Portal, Button, PaperProvider} from 'react-native-paper';
 
 import {RootStackParamList, navigationNames} from '@navigation';
 import {useNavigation} from '@react-navigation/native';
@@ -101,17 +101,36 @@ const AppBar = ({
               backgroundColor: colors.appBg,
             }}>
             <ScrollView>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
-              <Text className="mb-32">Example Modal</Text>
+              <DrawerItem />
             </ScrollView>
           </Modal>
         </Portal>
       </View>
+    </View>
+  );
+};
+
+const DrawerItem = () => {
+  const colors = useAppTheme().colors;
+
+  return (
+    <View className="border-red-400 border-2 m-2 rounded-[15px]  overflow-hidden">
+      <View className="flex-row items-center p-2">
+        <CircleIcon
+          size={40}
+          iconName={'sitemap'}
+          color={colors.normalText}
+          borderWidth={2}
+          onPress={() => {}}
+          className="mr-2"
+        />
+
+        <Text className="shrink" variant="v20">
+          Home
+        </Text>
+      </View>
+
+      <TouchFiller onPress={() => {}} />
     </View>
   );
 };

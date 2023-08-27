@@ -29,8 +29,8 @@ const CircleIcon = ({
   iconSize ??= size / 2;
   borderColor ??= color;
 
-  console.log('CircleIcon');
-  console.log('style:  ' + JSON.stringify(style));
+  //console.log('CircleIcon');
+  //console.log('style:  ' + JSON.stringify(style));
 
   return (
     <View
