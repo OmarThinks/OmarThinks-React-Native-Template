@@ -5,13 +5,15 @@ import {TouchableRipple} from 'react-native-paper';
 
 const TouchFiller = ({
   onPress,
-  zIndex = 1,
   borderRadius = 0,
+
+  zIndex = 1,
   style = {},
 }: {
   onPress?: () => void;
-  zIndex?: number;
   borderRadius?: number;
+
+  zIndex?: number;
   style?: ViewStyle;
 }) => {
   return (

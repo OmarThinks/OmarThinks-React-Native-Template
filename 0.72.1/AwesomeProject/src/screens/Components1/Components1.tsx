@@ -83,17 +83,17 @@ const Components1 = () => {
 
       <Header title="TouchFiller" />
       <View>
-        <View className="m-1 rounded-full bg-cyan-300">
+        <View className="m-1 rounded-full bg-cyan-300 overflow-hidden">
           <Text className="m-5">Pressable</Text>
-          <TouchFiller className="rounded-full" onPress={() => {}} />
+          <TouchFiller onPress={() => {}} />
         </View>
-        <View className="m-1 rounded-full bg-gray-400">
+        <View className="m-1 rounded-full bg-gray-400 overflow-hidden">
           <Text className="m-5">Not Pressable</Text>
-          <TouchFiller className="rounded-full" />
+          <TouchFiller />
         </View>
-        <View className="m-1 rounded-[20px] bg-gray-400 p-4">
+        <View className="m-1 rounded-[20px] bg-gray-400 p-4 overflow-hidden">
           <Text className="m-5">{"Don't use with padding"}</Text>
-          <TouchFiller className="rounded-[20px]" onPress={() => {}} />
+          <TouchFiller onPress={() => {}} borderRadius={20} />
         </View>
       </View>
 
