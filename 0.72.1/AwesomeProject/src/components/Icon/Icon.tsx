@@ -1,3 +1,4 @@
+import {styled} from 'nativewind';
 import React from 'react';
 import {ViewStyle} from 'react-native';
 import FAIcon from 'react-native-vector-icons/FontAwesome5';
@@ -9,7 +10,6 @@ const Icon = ({
   solid = false,
   light = false,
   brand = false,
-  _className = '',
   style = {},
 }: {
   size: number;
@@ -18,7 +18,6 @@ const Icon = ({
   solid?: boolean;
   light?: boolean;
   brand?: boolean;
-  _className?: string;
   style?: ViewStyle;
 }) => {
   return (
@@ -29,10 +28,9 @@ const Icon = ({
       solid={solid}
       light={light}
       brand={brand}
-      className={_className}
       style={style}
     />
   );
 };
 
-export default Icon;
+export default styled(Icon);

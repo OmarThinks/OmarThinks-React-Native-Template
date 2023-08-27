@@ -33,7 +33,7 @@ const AppBar = ({title}: {title?: string}) => {
           borderWidth={2}
           onPress={() => {}}
           bgColor="green"
-          _className="rounded-[2px]"
+          className="rounded-[2px]"
           //style={{marginRight: 12}}
         />
         <Text
