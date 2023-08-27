@@ -29,7 +29,7 @@ const AppBar = ({
 
   return (
     <View
-      className="h-[50] px-2.5 flex-row items-center justify-between self-stretch"
+      className="h-[50] px-2 flex-row items-center justify-between self-stretch"
       style={{backgroundColor: colors.appBarBg}}>
       <View className="flex-row grow shrink mr-5 items-center self-stretch">
         {hasBackButton && (
@@ -43,7 +43,7 @@ const AppBar = ({
                 navigation.goBack();
               } catch (error) {}
             }}
-            className="mr-2"
+            className="mr-1"
           />
         )}
 
@@ -64,9 +64,7 @@ const AppBar = ({
           onPress={() => {
             navigation.navigate(navigationNames.Components1);
           }}
-          className="ml-1.5"
         />
-
         <CircleIcon
           size={40}
           iconName={theme === 'light' ? 'moon' : 'sun'}
@@ -75,7 +73,6 @@ const AppBar = ({
           onPress={toggleTheme}
           className="ml-1.5"
         />
-
         <CircleIcon
           size={40}
           iconName="bars"

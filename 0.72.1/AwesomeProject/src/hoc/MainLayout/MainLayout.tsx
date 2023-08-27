@@ -1,10 +1,9 @@
 import {AppBar as AppBarOriginal} from '@components';
-import React from 'react';
-import {View, ScrollView, SafeAreaView, StatusBar} from 'react-native';
-import {useAppTheme} from '@theme';
-import {useSelector} from 'react-redux';
 import {themeSelector} from '@redux';
-import {NavigationNameType} from '@navigation';
+import {useAppTheme} from '@theme';
+import React from 'react';
+import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
+import {useSelector} from 'react-redux';
 
 const AppBar = ({
   title,
@@ -23,7 +22,6 @@ const MainLayout = (
     title = '',
     hzPadding = 15,
     vrPadding = 15,
-    prevScreen,
   }: {
     isScrollable?: boolean;
     hasAppBar?: boolean;
@@ -31,7 +29,6 @@ const MainLayout = (
     title?: string;
     hzPadding?: number;
     vrPadding?: number;
-    prevScreen?: NavigationNameType;
   } = {},
 ) => {
   const InnerMainLayout = () => {
@@ -41,15 +38,12 @@ const MainLayout = (
     const colors = useAppTheme().colors;
     const theme = useSelector(themeSelector);
 
-    // console.log('Title', title);
-
     if (isScrollable) {
       return (
         <SafeAreaView
           style={{
             backgroundColor: colors.appBg,
             flex: 1,
-            // minHeight: '100%'
           }}>
           <StatusBar
             barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
@@ -59,14 +53,9 @@ const MainLayout = (
           <ScrollView
             style={{
               flexGrow: 1,
-              // flexShrink: 1,
-              // minHeight: '100%',
-              // backgroundColor: 'red'
             }}
             contentContainerStyle={{
               flexGrow: 1,
-              // flexShrink: 1
-              // minHeight: '100%'
             }}>
             <View
               style={{
