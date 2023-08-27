@@ -101,7 +101,26 @@ const AppBar = ({
               backgroundColor: colors.appBg,
             }}>
             <ScrollView>
-              <DrawerItem />
+              <DrawerItem
+                onPress={() => {
+                  try {
+                    navigation.navigate(navigationNames.Home);
+                  } catch (error) {}
+                }}
+                iconName={'home'}
+                title={'Home'}
+                setModalVisible={setModalVisible}
+              />
+              <DrawerItem
+                onPress={() => {
+                  try {
+                    navigation.navigate(navigationNames.Components1);
+                  } catch (error) {}
+                }}
+                iconName={'sitemap'}
+                title={'Components 1'}
+                setModalVisible={setModalVisible}
+              />
             </ScrollView>
           </Modal>
         </Portal>
@@ -110,7 +129,17 @@ const AppBar = ({
   );
 };
 
-const DrawerItem = () => {
+const DrawerItem = ({
+  onPress,
+  iconName,
+  title,
+  setModalVisible,
+}: {
+  onPress: () => void;
+  iconName: string;
+  title: string;
+  setModalVisible: (visible: boolean) => void;
+}) => {
   const colors = useAppTheme().colors;
 
   return (
@@ -118,7 +147,7 @@ const DrawerItem = () => {
       <View className="flex-row items-center p-2">
         <CircleIcon
           size={40}
-          iconName={'sitemap'}
+          iconName={iconName}
           color={colors.normalText}
           borderWidth={2}
           onPress={() => {}}
@@ -126,11 +155,16 @@ const DrawerItem = () => {
         />
 
         <Text className="shrink" variant="v20">
-          Home
+          {title}
         </Text>
       </View>
 
-      <TouchFiller onPress={() => {}} />
+      <TouchFiller
+        onPress={() => {
+          onPress();
+          setModalVisible(false);
+        }}
+      />
     </View>
   );
 };
