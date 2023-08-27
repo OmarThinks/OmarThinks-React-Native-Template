@@ -11,7 +11,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 const AppBar = ({
   title,
-  hasBackButton = false,
+  hasBackButton = true,
 }: {
   title?: string;
   hasBackButton?: boolean;
@@ -31,27 +31,22 @@ const AppBar = ({
     <View
       className="h-[50] px-2 flex-row items-center justify-between self-stretch"
       style={{backgroundColor: colors.appBarBg}}>
-      <View className="flex-row grow shrink mr-5 items-center bg-slate-500 self-stretch">
-        <CircleIcon
-          size={40}
-          iconName="comments"
-          color={'black'}
-          borderWidth={2}
-          onPress={() => {}}
-          bgColor="green"
-          className="mr-4 ml-3"
-          style={{marginRight: 12}}
-        />
-        <CircleIcon
-          size={40}
-          iconName="comments"
-          color={'black'}
-          borderWidth={2}
-          onPress={() => {}}
-          bgColor="green"
-          className="mx-4"
-          style={{marginRight: 12}}
-        />
+      <View className="flex-row grow shrink mr-5 items-center self-stretch">
+        {hasBackButton && (
+          <CircleIcon
+            size={40}
+            iconName="arrow-left"
+            color={'black'}
+            borderWidth={2}
+            onPress={() => {
+              try {
+                navigation.goBack();
+              } catch (error) {}
+            }}
+            className="mr-2"
+          />
+        )}
+
         <Text
           className="shrink"
           style={{color: colors.normalText}}
