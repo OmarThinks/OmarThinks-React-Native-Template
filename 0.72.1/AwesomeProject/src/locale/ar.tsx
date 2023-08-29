@@ -1,7 +1,8 @@
 import en from './en';
 
 const ar: typeof en = {
-  'home.screen': 'الصفحة الرئيسية',
+  'screen.home': 'الصفحة الرئيسية',
+  'screen.components1': 'عناصر 1',
 };
 
 export default ar;

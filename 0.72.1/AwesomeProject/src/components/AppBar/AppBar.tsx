@@ -2,6 +2,7 @@ import {CircleIcon, Text, TouchFiller} from '@components';
 import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 import {ScrollView, View} from 'react-native';
 import {Modal, Portal} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
@@ -20,6 +21,8 @@ const AppBar = ({
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
+
+  const {t, i18n} = useTranslation();
 
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -108,7 +111,7 @@ const AppBar = ({
                   } catch (error) {}
                 }}
                 iconName={'home'}
-                title={'Home'}
+                title={t('screen.home')}
                 setModalVisible={setModalVisible}
               />
               <DrawerItem
@@ -118,7 +121,7 @@ const AppBar = ({
                   } catch (error) {}
                 }}
                 iconName={'sitemap'}
-                title={'Components 1'}
+                title={t('screen.components1')}
                 setModalVisible={setModalVisible}
               />
             </ScrollView>
