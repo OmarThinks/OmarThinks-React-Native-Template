@@ -2,7 +2,8 @@ import {Text} from '@components';
 import {MainLayout} from '@hoc';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {View} from 'react-native';
+import {I18nManager, View} from 'react-native';
+import {Button} from 'react-native-paper';
 
 const Home = () => {
   const a = 'p-5';
@@ -13,6 +14,13 @@ const Home = () => {
   return (
     <View className="grow self-stretch justify-center items-center">
       <Text className="justify-center font-bold">{t('screen.home')}</Text>
+      <Button
+        onPress={() => {
+          //i18n.changeLanguage('ar');
+          I18nManager.forceRTL(!I18nManager.isRTL);
+        }}>
+        <Text>{'change language'}</Text>
+      </Button>
     </View>
   );
 };
