@@ -7,9 +7,7 @@ import {Button} from 'react-native-paper';
 import RNRestart from 'react-native-restart';
 
 const Home = () => {
-  const a = 'p-5';
-
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
   // console.log(i18n.language);
 
   return (
