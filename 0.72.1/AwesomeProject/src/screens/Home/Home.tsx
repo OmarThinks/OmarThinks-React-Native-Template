@@ -8,9 +8,7 @@ const Home = () => {
   const a = 'p-5';
 
   const {t, i18n} = useTranslation();
-  console.log(i18n.language);
-  console.log(t('home.screen'));
-  console.log(t('Welcome to React'));
+  // console.log(i18n.language);
 
   return (
     <View className="grow self-stretch justify-center items-center">
@@ -18,6 +16,7 @@ const Home = () => {
       <View className="self-stretch h-[100] bg-red-600" />
 
       <Text className="justify-center font-bold">{t('home.screen')}</Text>
+
       <Text className={`bg-green-500 ${a}`}>Hey</Text>
       <Text className="mt-5 bg-slate-600">Hi</Text>
       <CircleIcon
