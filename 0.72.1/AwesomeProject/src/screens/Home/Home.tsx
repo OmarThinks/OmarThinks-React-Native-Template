@@ -4,6 +4,7 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {I18nManager, View} from 'react-native';
 import {Button} from 'react-native-paper';
+import RNRestart from 'react-native-restart';
 
 const Home = () => {
   const a = 'p-5';
@@ -18,6 +19,7 @@ const Home = () => {
         onPress={() => {
           //i18n.changeLanguage('ar');
           I18nManager.forceRTL(!I18nManager.isRTL);
+          RNRestart.restart();
         }}>
         <Text>{'change language'}</Text>
       </Button>
