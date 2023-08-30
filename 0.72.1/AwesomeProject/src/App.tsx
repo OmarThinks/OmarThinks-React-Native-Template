@@ -5,7 +5,7 @@ import {darkTheme, lightTheme} from '@theme';
 import React from 'react';
 import {PaperProvider} from 'react-native-paper';
 import {Provider as ReduxProvider, useSelector} from 'react-redux';
-import './locale/index';
+import '@locale';
 import {I18nManager} from 'react-native';
 
 const AppWithoutRedux = () => {

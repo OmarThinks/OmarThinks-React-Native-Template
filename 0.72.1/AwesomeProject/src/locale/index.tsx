@@ -1,8 +1,11 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
-import en from './en';
+import {I18nManager} from 'react-native';
+import RNRestart from 'react-native-restart';
 import ar from './ar';
 import de from './de';
+import en from './en';
+
 export const defaultNS = 'common';
 
 type Language = 'en' | 'ar' | 'de';
@@ -50,3 +53,12 @@ i18n
   });
 
 export default i18n;
+
+export const switchLanguage = (language: Language) => {
+  const oldIsRtl = I18nManager.isRTL;
+  const newIsRtl = isLanguageRtl[language];
+  I18nManager.forceRTL(newIsRtl);
+  if (newIsRtl !== oldIsRtl) {
+    RNRestart.restart();
+  }
+};
