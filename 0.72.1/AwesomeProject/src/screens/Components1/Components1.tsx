@@ -96,6 +96,11 @@ const Components1 = () => {
           <Text className="m-5">{"Don't use with padding"}</Text>
           <TouchFiller onPress={() => {}} borderRadius={20} />
         </View>
+
+        <View className="m-1 rounded-full bg-gray-400">
+          <Text className="m-5">{"Don't forget to hide overflow"}</Text>
+          <TouchFiller onPress={() => {}} />
+        </View>
       </View>
 
       <Header title="Icon" />
