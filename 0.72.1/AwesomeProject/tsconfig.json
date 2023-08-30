@@ -11,7 +11,8 @@
       "@screens": ["./src/screens/index.tsx"],
       "@storage": ["./src/storage/index.tsx"],
       "@theme": ["./src/theme/index.tsx"],
-      "@navigation": ["./src/navigation/index.tsx"]
+      "@navigation": ["./src/navigation/index.tsx"],
+      "@locale":["./src/locale/index.tsx"]
       // "@app": ["./src/App.tsx"], (only if needed)
     }
   },
