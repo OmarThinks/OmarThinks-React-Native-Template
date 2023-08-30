@@ -4,6 +4,7 @@ const ar: typeof en = {
   common: {
     'screen.home': 'الصفحة الرئيسية',
     'screen.components1': 'عناصر 1',
+    language: 'اللغة',
   },
 };
 
