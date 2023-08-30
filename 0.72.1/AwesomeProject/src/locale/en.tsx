@@ -1,6 +1,6 @@
 const en = {
   common: {
-    'screen.home': 'Home Screen',
+    'screen.home': 'Home',
     'screen.components1': 'Components 1',
   },
 };

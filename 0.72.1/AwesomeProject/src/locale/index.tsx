@@ -58,6 +58,7 @@ export const switchLanguage = (language: Language) => {
   const oldIsRtl = I18nManager.isRTL;
   const newIsRtl = isLanguageRtl[language];
   I18nManager.forceRTL(newIsRtl);
+  i18n.changeLanguage(language);
   if (newIsRtl !== oldIsRtl) {
     RNRestart.restart();
   }

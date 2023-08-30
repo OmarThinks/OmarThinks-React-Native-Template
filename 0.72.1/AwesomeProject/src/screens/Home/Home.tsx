@@ -17,21 +17,18 @@ const Home = () => {
       <Button
         onPress={() => {
           switchLanguage('ar');
-          i18n.changeLanguage('ar');
         }}>
         <Text>{'Arabic'}</Text>
       </Button>
       <Button
         onPress={() => {
           switchLanguage('en');
-          i18n.changeLanguage('en');
         }}>
         <Text>{'English'}</Text>
       </Button>
       <Button
         onPress={() => {
           switchLanguage('de');
-          i18n.changeLanguage('de');
         }}>
         <Text>{'German'}</Text>
       </Button>
