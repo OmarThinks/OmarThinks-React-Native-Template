@@ -1,4 +1,4 @@
-import {getStoredTheme, setStoredTheme} from './theme';
 import {getStoredLanguage, setStoredLanguage} from './language';
+import {getStoredTheme, setStoredTheme} from './theme';
 
-export {getStoredTheme, setStoredTheme, getStoredLanguage, setStoredLanguage};
+export {getStoredLanguage, getStoredTheme, setStoredLanguage, setStoredTheme};

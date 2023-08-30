@@ -1,11 +1,10 @@
 import {Text} from '@components';
 import {MainLayout} from '@hoc';
+import {switchLanguage} from '@locale';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {I18nManager, View} from 'react-native';
+import {View} from 'react-native';
 import {Button} from 'react-native-paper';
-import RNRestart from 'react-native-restart';
-import i18n, {switchLanguage} from '@locale';
 
 const Home = () => {
   const {t} = useTranslation();

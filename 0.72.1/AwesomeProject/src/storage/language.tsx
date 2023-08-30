@@ -1,5 +1,5 @@
-import {getData, storeData} from './base';
 import {Language} from '@locale';
+import {getData, storeData} from './base';
 
 const languageStorageKey = 'language';
 

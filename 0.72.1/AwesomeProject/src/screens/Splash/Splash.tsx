@@ -1,3 +1,4 @@
+import {initializeLanguage} from '@locale';
 import {RootStackParamList, navigationNames} from '@navigation';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -10,7 +11,6 @@ type SplashScreenProps = RouteProp<
   RootStackParamList,
   typeof navigationNames.Splash
 >;
-import {initializeLanguage} from '@locale';
 
 const Splash = () => {
   // Navigation
