@@ -3,7 +3,7 @@ import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {ScrollView, View} from 'react-native';
+import {ScrollView, View, I18nManager} from 'react-native';
 import {Modal, Portal} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -41,7 +41,7 @@ const AppBar = ({
         {hasBackButton && (
           <CircleIcon
             size={40}
-            iconName="arrow-left"
+            iconName={I18nManager.isRTL ? 'arrow-right' : 'arrow-left'}
             color={colors.normalText}
             borderWidth={2}
             onPress={() => {
@@ -49,7 +49,7 @@ const AppBar = ({
                 navigation.goBack();
               } catch (error) {}
             }}
-            className="mr-1"
+            className="mr-2"
           />
         )}
 
