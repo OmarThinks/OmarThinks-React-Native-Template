@@ -6,24 +6,27 @@ import de from './de';
 export const defaultNS = 'common';
 
 type Language = 'en' | 'ar' | 'de';
-type NameSpace = 'common';
 
-type LanguageContent = {
-  [key in NameSpace]: typeof en;
+type ResourcesType = {
+  [key in Language]: typeof en;
 };
 
-type A = {
+type IsLanguageRtlType = {
   [key in Language]: boolean;
 };
 
-const b: A = {};
+export const isLanguageRtl: IsLanguageRtlType = {
+  en: false,
+  ar: true,
+  de: false,
+};
 
 //export default locale;
 
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
-export const resources = {en, ar, de} as const;
+export const resources: ResourcesType = {en, ar, de} as const;
 
 /*
 export const isLangRTL: {
