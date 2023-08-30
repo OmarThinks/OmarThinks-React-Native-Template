@@ -3,9 +3,9 @@ import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import {I18nManager} from 'react-native';
 import RNRestart from 'react-native-restart';
-import ar from './ar';
-import de from './de';
-import en from './en';
+import ar from './ar/index';
+import de from './de/index';
+import en from './en/index';
 
 export const defaultNS = 'common';
 

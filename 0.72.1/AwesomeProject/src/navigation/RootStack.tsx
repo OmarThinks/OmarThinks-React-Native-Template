@@ -1,5 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Splash, Components1, Language} from '@screens';
+import {Components1, Home, Language, Splash} from '@screens';
 import React from 'react';
 
 // https://reactnavigation.org/docs/typescript/

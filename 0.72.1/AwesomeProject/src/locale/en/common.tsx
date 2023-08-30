@@ -1,5 +1,7 @@
-const enCommon = {
-  'home.screen': 'Home Screen',
+const common = {
+  'screen.home': 'Home',
+  'screen.components1': 'Components 1',
+  language: 'Language',
 };
 
-export default enCommon;
+export default common;

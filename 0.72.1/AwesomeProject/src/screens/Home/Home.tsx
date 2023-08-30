@@ -1,6 +1,5 @@
 import {Text} from '@components';
 import {MainLayout} from '@hoc';
-import {useAppTheme} from '@theme';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {View} from 'react-native';

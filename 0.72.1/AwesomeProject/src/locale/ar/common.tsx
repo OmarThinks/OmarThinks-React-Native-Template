@@ -1,5 +1,9 @@
 import enCommon from '../en/common';
 
-const arCommon: typeof enCommon = {'home.screen': 'الشاشة الرئيسية'};
+const common: typeof enCommon = {
+  'screen.home': 'الصفحة الرئيسية',
+  'screen.components1': 'عناصر 1',
+  language: 'اللغة',
+};
 
-export default arCommon;
+export default common;

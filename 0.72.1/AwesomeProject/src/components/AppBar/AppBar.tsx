@@ -3,7 +3,7 @@ import {setTheme, themeSelector} from '@redux';
 import {useAppTheme} from '@theme';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {ScrollView, View, I18nManager} from 'react-native';
+import {I18nManager, ScrollView, View} from 'react-native';
 import {Modal, Portal} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -22,7 +22,7 @@ const AppBar = ({
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
