@@ -64,15 +64,6 @@ const AppBar = ({
       <View className="flex-row items-center">
         <CircleIcon
           size={40}
-          iconName={'sitemap'}
-          color={colors.normalText}
-          borderWidth={2}
-          onPress={() => {
-            navigation.navigate(navigationNames.Components1);
-          }}
-        />
-        <CircleIcon
-          size={40}
           iconName={theme === 'light' ? 'moon' : 'sun'}
           color={colors.normalText}
           borderWidth={2}
