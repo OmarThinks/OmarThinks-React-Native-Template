@@ -5,6 +5,7 @@ import RNRestart from 'react-native-restart';
 import ar from './ar';
 import de from './de';
 import en from './en';
+import {setStoredLanguage, getStoredLanguage} from '@storage';
 
 export const defaultNS = 'common';
 
@@ -54,12 +55,20 @@ i18n
 
 export default i18n;
 
-export const switchLanguage = (language: Language) => {
+export const switchLanguage = async (language: Language) => {
   const oldIsRtl = I18nManager.isRTL;
   const newIsRtl = isLanguageRtl[language];
   I18nManager.forceRTL(newIsRtl);
   i18n.changeLanguage(language);
+
+  await setStoredLanguage(language);
+
   if (newIsRtl !== oldIsRtl) {
     RNRestart.restart();
   }
+};
+
+export const initializeLanguage = async () => {
+  const language = await getStoredLanguage();
+  i18n.changeLanguage(language);
 };

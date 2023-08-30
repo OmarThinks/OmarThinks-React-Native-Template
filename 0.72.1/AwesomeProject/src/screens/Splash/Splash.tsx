@@ -10,6 +10,7 @@ type SplashScreenProps = RouteProp<
   RootStackParamList,
   typeof navigationNames.Splash
 >;
+import {initializeLanguage} from '@locale';
 
 const Splash = () => {
   // Navigation
@@ -24,6 +25,7 @@ const Splash = () => {
   React.useEffect(() => {
     const logStoredTheme = async () => {
       const storedTheme = await getStoredTheme();
+      await initializeLanguage();
       // console.log('storedTheme', storedTheme);
 
       if (storedTheme) {
