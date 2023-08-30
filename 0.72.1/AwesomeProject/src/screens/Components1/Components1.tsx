@@ -163,6 +163,6 @@ export default () => {
 
   return MainLayout(Components1, {
     title: t('screen.components1'),
-    hasBackButton: false,
+    hasBackButton: true,
   });
 };

@@ -124,6 +124,16 @@ const AppBar = ({
                 title={t('screen.components1')}
                 setModalVisible={setModalVisible}
               />
+              <DrawerItem
+                onPress={() => {
+                  try {
+                    navigation.navigate(navigationNames.Language);
+                  } catch (error) {}
+                }}
+                iconName={'globe'}
+                title={t('language')}
+                setModalVisible={setModalVisible}
+              />
             </ScrollView>
           </Modal>
         </Portal>
