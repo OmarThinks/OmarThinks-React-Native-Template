@@ -8,7 +8,7 @@ import en from './en';
 
 export const defaultNS = 'common';
 
-type Language = 'en' | 'ar' | 'de';
+export type Language = 'en' | 'ar' | 'de';
 
 type ResourcesType = {
   [key in Language]: typeof en;
