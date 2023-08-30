@@ -42,8 +42,10 @@ export default MainLayout(Language, {
 */
 
 export default () => {
+  const {t} = useTranslation();
+
   return MainLayout(Language, {
-    title: 'Language',
+    title: t('language'),
     hasBackButton: true,
   });
 };

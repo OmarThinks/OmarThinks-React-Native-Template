@@ -1,6 +1,7 @@
 import {CircleIcon, Icon, Text, TouchFiller} from '@components';
 import {MainLayout} from '@hoc';
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 import {View} from 'react-native';
 
 const HR = ({height = 2}: {height?: number}) => {
@@ -158,8 +159,10 @@ export default MainLayout(Components1, {
 */
 
 export default () => {
+  const {t} = useTranslation();
+
   return MainLayout(Components1, {
-    title: 'Components1',
+    title: t('screen.components1'),
     hasBackButton: false,
   });
 };
