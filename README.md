@@ -41,10 +41,30 @@ git clone https://github.com/OmarThinks/OmarThinks-React-Native-Template
 This template supports light and dark themes.  
 On changing the theme, the theme name is stored presistently using Async Storage, and it initialized in the Splash screen on start.
 
+**Light Theme:**
+
+<img src="./images/theme-1.png" width=400>
+
+**Dark Theme:**
+
+<img src="./images/theme-2.png" width=400>
+
 ### D-2) Languages:
 
 The app supports languages, and also switching rtl or lrt.  
 But if the app changes the language, and both languages have differenet directions, then the app must restart.
+
+**English is ltr(Left to Right):**
+
+<img src="./images/lang-1.png" width=400>
+
+**German is ltr(Left to Right):**
+
+<img src="./images/lang-2.png" width=400>
+
+**Arabic is rtl(Right to Left):**
+
+<img src="./images/lang-3.png" width=400>
 
 ### D-3) Common Components:
 
@@ -69,3 +89,7 @@ MainLayout reduces code redundency, and keep the code as DRY nd possible.
 # E) Motivation:
 
 - To start projects faster, instead of spending tto much time preconfiguring everything.
+
+# F) Todos:
+
+- Create an Expo template
