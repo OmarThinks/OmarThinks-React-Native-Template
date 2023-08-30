@@ -5,6 +5,7 @@ import {useTranslation} from 'react-i18next';
 import {I18nManager, View} from 'react-native';
 import {Button} from 'react-native-paper';
 import RNRestart from 'react-native-restart';
+import i18n, {switchLanguage} from '@locale';
 
 const Home = () => {
   const {t} = useTranslation();
@@ -15,11 +16,24 @@ const Home = () => {
       <Text className="justify-center font-bold">{t('screen.home')}</Text>
       <Button
         onPress={() => {
-          //i18n.changeLanguage('ar');
-          I18nManager.forceRTL(!I18nManager.isRTL);
-          RNRestart.restart();
+          switchLanguage('ar');
+          i18n.changeLanguage('ar');
         }}>
-        <Text>{'change language'}</Text>
+        <Text>{'Arabic'}</Text>
+      </Button>
+      <Button
+        onPress={() => {
+          switchLanguage('en');
+          i18n.changeLanguage('en');
+        }}>
+        <Text>{'English'}</Text>
+      </Button>
+      <Button
+        onPress={() => {
+          switchLanguage('de');
+          i18n.changeLanguage('de');
+        }}>
+        <Text>{'German'}</Text>
       </Button>
     </View>
   );
