@@ -34,7 +34,16 @@ const Language = () => {
   );
 };
 
+/*
 export default MainLayout(Language, {
   title: 'Languages',
   hasBackButton: false,
 });
+*/
+
+export default () => {
+  return MainLayout(Language, {
+    title: 'Language',
+    hasBackButton: true,
+  });
+};

@@ -35,7 +35,23 @@ const Home = () => {
   );
 };
 
+/*
 export default MainLayout(Home, {
   title: 'Home',
   hasBackButton: false,
 });
+*/
+
+const ToRerurn = () => {
+  return MainLayout(Home, {
+    title: 'Home',
+    hasBackButton: false,
+  });
+};
+
+export default () => {
+  return MainLayout(Home, {
+    title: 'Home',
+    hasBackButton: false,
+  });
+};

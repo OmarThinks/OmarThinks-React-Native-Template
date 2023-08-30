@@ -31,54 +31,50 @@ const MainLayout = (
     vrPadding?: number;
   } = {},
 ) => {
-  const InnerMainLayout = () => {
-    const appBar = hasAppBar && (
-      <AppBar title={title} hasBackButton={hasBackButton} />
-    );
-    const colors = useAppTheme().colors;
-    const theme = useSelector(themeSelector);
+  const appBar = hasAppBar && (
+    <AppBar title={title} hasBackButton={hasBackButton} />
+  );
+  const colors = useAppTheme().colors;
+  const theme = useSelector(themeSelector);
 
-    if (isScrollable) {
-      return (
-        <SafeAreaView
-          style={{
-            backgroundColor: colors.appBg,
-            flex: 1,
-          }}>
-          <StatusBar
-            barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
-            backgroundColor={colors.appBg}
-          />
-          {appBar}
-          <ScrollView
-            style={{
-              flexGrow: 1,
-            }}
-            contentContainerStyle={{
-              flexGrow: 1,
-            }}>
-            <View
-              style={{
-                marginHorizontal: hzPadding,
-                marginVertical: vrPadding,
-                flexGrow: 1,
-                alignSelf: 'stretch',
-              }}>
-              <ScreenComponent />
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      );
-    }
+  if (isScrollable) {
     return (
-      <View style={{flex: 1}}>
+      <SafeAreaView
+        style={{
+          backgroundColor: colors.appBg,
+          flex: 1,
+        }}>
+        <StatusBar
+          barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
+          backgroundColor={colors.appBg}
+        />
         {appBar}
-        <ScreenComponent />
-      </View>
+        <ScrollView
+          style={{
+            flexGrow: 1,
+          }}
+          contentContainerStyle={{
+            flexGrow: 1,
+          }}>
+          <View
+            style={{
+              marginHorizontal: hzPadding,
+              marginVertical: vrPadding,
+              flexGrow: 1,
+              alignSelf: 'stretch',
+            }}>
+            <ScreenComponent />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     );
-  };
-
-  return InnerMainLayout;
+  }
+  return (
+    <View style={{flex: 1}}>
+      {appBar}
+      <ScreenComponent />
+    </View>
+  );
 };
 
 export default MainLayout;
