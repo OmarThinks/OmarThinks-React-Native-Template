@@ -6,7 +6,7 @@ import {useTranslation} from 'react-i18next';
 import {View} from 'react-native';
 import {Button} from 'react-native-paper';
 
-const Languages = () => {
+const Language = () => {
   const {t} = useTranslation();
 
   return (
@@ -34,7 +34,7 @@ const Languages = () => {
   );
 };
 
-export default MainLayout(Languages, {
+export default MainLayout(Language, {
   title: 'Languages',
   hasBackButton: false,
 });
