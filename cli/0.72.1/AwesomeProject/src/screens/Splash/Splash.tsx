@@ -3,14 +3,20 @@ import {RootStackParamList, navigationNames} from '@navigation';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {setTheme} from '@redux';
+import {AnyAction} from '@reduxjs/toolkit';
 import {getStoredTheme} from '@storage';
-import React from 'react';
+import React, {Dispatch} from 'react';
 import {View} from 'react-native';
 import {useDispatch} from 'react-redux';
 type SplashScreenProps = RouteProp<
   RootStackParamList,
   typeof navigationNames.Splash
 >;
+
+const initializeTheme = async (dispatch: Dispatch<AnyAction>) => {
+  const storedTheme = await getStoredTheme();
+  dispatch(setTheme(storedTheme));
+};
 
 const Splash = () => {
   // Navigation
@@ -22,10 +28,28 @@ const Splash = () => {
 
   const dispatch = useDispatch();
 
+  const [isReady1, setIsReady1] = React.useState(false);
+  const [isReady2, setIsReady2] = React.useState(false);
+  const [initialized, setInitialized] = React.useState(false);
+
   React.useEffect(() => {
+    initializeLanguage()
+      .catch(() => {})
+      .finally(() => {
+        setIsReady1(true);
+      });
+
+    initializeTheme(dispatch)
+      .catch(() => {})
+      .finally(() => {
+        setIsReady2(true);
+      });
+
+    /*
     const logStoredTheme = async () => {
       const storedTheme = await getStoredTheme();
       await initializeLanguage();
+
       // console.log('storedTheme', storedTheme);
 
       if (storedTheme) {
@@ -35,8 +59,15 @@ const Splash = () => {
       navigation.replace(navigationNames.Home);
     };
 
-    logStoredTheme();
-  }, []);
+    logStoredTheme();*/
+  }, [dispatch]);
+
+  React.useEffect(() => {
+    if (isReady1 && isReady2 && !initialized) {
+      setInitialized(true);
+      navigation.replace(navigationNames.Home);
+    }
+  }, [isReady1, isReady2, initialized, navigation]);
 
   return <View />;
 };

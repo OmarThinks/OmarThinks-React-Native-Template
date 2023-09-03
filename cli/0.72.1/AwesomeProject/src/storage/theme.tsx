@@ -4,7 +4,7 @@ import {getData, storeData} from './base';
 const themeStorageKey = 'theme';
 
 const getStoredTheme = async () => {
-  const theme = (await getData(themeStorageKey)) as Theme | null;
+  const theme = ((await getData(themeStorageKey)) as Theme) ?? 'light';
   return theme;
 };
 

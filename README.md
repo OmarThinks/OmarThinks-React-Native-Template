@@ -49,7 +49,7 @@ On changing the theme, the theme name is stored presistently using Async Storage
 
 <img src="./images/theme-2.png" width=400>
 
-### D-2) Languages:
+### D-2) Localization:
 
 The app supports languages, and also switching rtl or lrt.  
 But if the app changes the language, and both languages have differenet directions, then the app must restart.
