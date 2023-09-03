@@ -86,6 +86,42 @@ The template supports TailWindCSS
 MainLayout is a HOC (Higher-Order Component) that I have created for this template.  
 MainLayout reduces code redundency, and keep the code as DRY nd possible.
 
+### D-6) Naviggation and Theme Type-Safety:
+
+<b>
+
+```ts
+import { useAppTheme } from "@theme";
+
+// Navigation and Route
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList, navigationNames } from "@navigation";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
+
+type SplashScreenProps = RouteProp<
+  RootStackParamList,
+  typeof navigationNames.Splash
+>;
+
+const MyComponent = () => {
+  // Theme
+  const colors = useAppTheme().colors;
+  const theme = useAppTheme();
+
+  // Nav
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const route = useRoute<SplashScreenProps>();
+  const params = useRoute<SplashScreenProps>().params;
+
+  return <></>;
+};
+
+export default MyComponent;
+```
+
+</b>
+
 # E) Motivation:
 
 - To start projects faster, instead of spending tto much time preconfiguring everything.
