@@ -4,6 +4,10 @@
 
 A template pre-configured with requirements for most projects
 
+## Youtube:
+
+https://www.youtube.com/watch?v=VN2tiZ5bv7M
+
 # B) How to use:
 
 - Clone the Repo:
@@ -43,11 +47,11 @@ On changing the theme, the theme name is stored presistently using Async Storage
 
 **Light Theme:**
 
-<img src="./images/theme-1.png" width=400>
+<img src="./media/images/theme-1.png" width=400>
 
 **Dark Theme:**
 
-<img src="./images/theme-2.png" width=400>
+<img src="./media/images/theme-2.png" width=400>
 
 ### D-2) Localization:
 
@@ -56,15 +60,15 @@ But if the app changes the language, and both languages have differenet directio
 
 **English is ltr(Left to Right):**
 
-<img src="./images/lang-1.png" width=400>
+<img src="./media/images/lang-1.png" width=400>
 
 **German is ltr(Left to Right):**
 
-<img src="./images/lang-2.png" width=400>
+<img src="./media/images/lang-2.png" width=400>
 
 **Arabic is rtl(Right to Left):**
 
-<img src="./images/lang-3.png" width=400>
+<img src="./media/images/lang-3.png" width=400>
 
 ### D-3) Common Components:
 
@@ -86,7 +90,7 @@ The template supports TailWindCSS
 MainLayout is a HOC (Higher-Order Component) that I have created for this template.  
 MainLayout reduces code redundency, and keep the code as DRY nd possible.
 
-### D-6) Naviggation and Theme Type-Safety:
+### D-6) Navigation and Theme Type-Safety:
 
 <b>
 
