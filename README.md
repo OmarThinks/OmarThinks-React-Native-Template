@@ -34,7 +34,7 @@ git clone https://github.com/OmarThinks/OmarThinks-React-Native-Template
 - Async Storage
 - i18next
 - NativeWind
-- Modle Resolver
+- Module Resolver
 - TypeScript
 - React Native Paper
 
