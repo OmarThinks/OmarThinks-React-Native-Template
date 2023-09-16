@@ -121,7 +121,7 @@ const AppBar = ({
                     navigation.navigate(navigationNames.Language);
                   } catch (error) {}
                 }}
-                iconName={'globe'}
+                iconName={'language'}
                 title={t('language')}
                 setModalVisible={setModalVisible}
               />
