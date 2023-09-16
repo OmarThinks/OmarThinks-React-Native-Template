@@ -10,7 +10,7 @@
 - [ ]: install RNP
 - [ ]: Implement the RNP Provider
 - [ ]: Add theme, colors and fonts from cli template
-- [ ]:
+- [ ]: Judhge the Text Component (When the time is suitable)
 - [ ]:
 - [ ]:
 - [ ]:
