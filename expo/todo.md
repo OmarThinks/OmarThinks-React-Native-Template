@@ -1,0 +1,40 @@
+# TODO:
+
+- [x]: Create a project from expo template
+- [x]: Make sure it works
+- [x]: create a folder for the version
+- [ ]: Implememnt the `src` directory
+- [ ]: install redux
+- [ ]: Add redux to layout
+- [ ]: install RNP
+- [ ]: Implement the RNP Provider
+- [ ]: Add theme, colors and fonts from cli template
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
+- [ ]:
