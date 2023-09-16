@@ -1,10 +1,26 @@
 module.exports = function (api) {
   api.cache(true);
   return {
-    presets: ['babel-preset-expo'],
+    presets: ["babel-preset-expo"],
     plugins: [
       // Required for expo-router
-      'expo-router/babel',
+      "expo-router/babel",
+      [
+        "module-resolver",
+        {
+          root: ["."],
+          alias: {
+            "@components": "./src/components/index.tsx",
+            //"@hoc": "./src/hoc/index.tsx",
+            //"@redux": "./src/redux/index.tsx",
+            //"@screens": "./src/screens/index.tsx",
+            //"@storage": "./src/storage/index.tsx",
+            //"@theme": "./src/theme/index.tsx",
+            //"@navigation": "./src/navigation/index.tsx",
+            //"@locale": "./src/locale/index.tsx",
+          },
+        },
+      ],
     ],
   };
 };

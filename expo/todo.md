@@ -4,6 +4,7 @@
 - [x]: Make sure it works
 - [x]: create a folder for the version
 - [x]: Implememnt the `src` directory
+- [ ]: add Module resolver
 - [ ]: install redux
 - [ ]: Add redux to layout
 - [ ]: install RNP
