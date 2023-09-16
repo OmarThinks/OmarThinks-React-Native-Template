@@ -105,16 +105,18 @@ const AppBar = ({
                 title={t('screen.home')}
                 setModalVisible={setModalVisible}
               />
-              <DrawerItem
-                onPress={() => {
-                  try {
-                    navigation.navigate(navigationNames.Components1);
-                  } catch (error) {}
-                }}
-                iconName={'sitemap'}
-                title={t('screen.components1')}
-                setModalVisible={setModalVisible}
-              />
+              {__DEV__ && (
+                <DrawerItem
+                  onPress={() => {
+                    try {
+                      navigation.navigate(navigationNames.Components1);
+                    } catch (error) {}
+                  }}
+                  iconName={'sitemap'}
+                  title={t('screen.components1')}
+                  setModalVisible={setModalVisible}
+                />
+              )}
               <DrawerItem
                 onPress={() => {
                   try {
