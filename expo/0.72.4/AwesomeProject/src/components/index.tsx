@@ -2,7 +2,7 @@
 //import CircleIcon from "./CircleIcon/CircleIcon";
 import EditScreenInfo from "./EditScreenInfo";
 import { ExternalLink } from "./ExternalLink";
-//import Icon from "./Icon/Icon";
+import Icon from "./Icon/Icon";
 import { MonoText } from "./StyledText";
 import { Text, View, useThemeColor } from "./Themed";
 //import TouchFiller from "./TouchFiller/TouchFiller";
@@ -13,7 +13,7 @@ export {
   //CircleIcon,
   EditScreenInfo,
   ExternalLink,
-  //Icon,
+  Icon,
   MonoText,
   Text,
   //TouchFiller,
