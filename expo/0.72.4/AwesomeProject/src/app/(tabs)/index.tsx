@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 //import EditScreenInfo from '../../components/EditScreenInfo';
 //import { Text, View } from "../../components/Themed";
-import { EditScreenInfo, Text, View } from "@components";
+import { EditScreenInfo, Text, View, Icon } from "@components";
 import { Text as TextRN } from "react-native";
 
 export default function TabOneScreen() {
@@ -15,7 +15,8 @@ export default function TabOneScreen() {
         darkColor="rgba(255,255,255,0.1)"
       />
       <EditScreenInfo path="app/(tabs)/index.tsx" />
-      <TextRN className="grow text-red-700">Hey</TextRN>
+      <TextRN className="text-red-700">Hey</TextRN>
+      <Icon name="car" size={30} color={"green"} />
     </View>
   );
 }

@@ -1,8 +1,7 @@
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { styled } from "nativewind";
 import React from "react";
 import { ViewStyle } from "react-native";
-import { FAIconType } from "./FAIconType";
 
 const Icon = ({
   size,
@@ -15,14 +14,14 @@ const Icon = ({
 }: {
   size: number;
   color: string;
-  name: FAIconType;
+  name: string;
   solid?: boolean;
   light?: boolean;
   brand?: boolean;
   style?: ViewStyle;
 }) => {
   return (
-    <FontAwesome
+    <FontAwesome5
       name={name}
       size={size}
       color={color}
