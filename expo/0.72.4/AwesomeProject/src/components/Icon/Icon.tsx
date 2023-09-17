@@ -1,7 +1,8 @@
-import {styled} from 'nativewind';
-import React from 'react';
-import {ViewStyle} from 'react-native';
-import FAIcon from 'react-native-vector-icons/FontAwesome5';
+import { FontAwesome } from "@expo/vector-icons";
+import { styled } from "nativewind";
+import React from "react";
+import { ViewStyle } from "react-native";
+import { FAIconType } from "./FAIconType";
 
 const Icon = ({
   size,
@@ -14,14 +15,14 @@ const Icon = ({
 }: {
   size: number;
   color: string;
-  name: string;
+  name: FAIconType;
   solid?: boolean;
   light?: boolean;
   brand?: boolean;
   style?: ViewStyle;
 }) => {
   return (
-    <FAIcon
+    <FontAwesome
       name={name}
       size={size}
       color={color}
