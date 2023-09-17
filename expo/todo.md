@@ -7,11 +7,11 @@
 - [x]: add Module resolver
 - [x]: install redux
 - [ ]: Add redux to layout
-- [ ]: install RNP
+- [ ]: install RNP (React Native Paper)
 - [ ]: Implement the RNP Provider
 - [ ]: Add theme, colors and fonts from cli template
 - [ ]: Judhge the Text Component (When the time is suitable)
-- [ ]:
+- [ ]: resolve components imports
 - [ ]:
 - [ ]:
 - [ ]:
