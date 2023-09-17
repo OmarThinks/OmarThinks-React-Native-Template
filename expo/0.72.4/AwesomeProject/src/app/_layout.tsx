@@ -4,11 +4,13 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
+import { store, themeSelector } from "@redux";
+import { darkTheme, lightTheme } from "@theme";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "react-native";
-import { store } from "@redux";
+import { PaperProvider } from "react-native-paper";
 import { Provider as ReduxProvider, useSelector } from "react-redux";
 
 export {
@@ -48,17 +50,26 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
-function RootLayoutNav() {
+const RootLayoutNav1 = () => {
   const colorScheme = useColorScheme();
+  const theme = useSelector(themeSelector);
 
   return (
-    <ReduxProvider store={store}>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <PaperProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: "modal" }} />
         </Stack>
-      </ThemeProvider>
+      </PaperProvider>
+    </ThemeProvider>
+  );
+};
+
+function RootLayoutNav() {
+  return (
+    <ReduxProvider store={store}>
+      <RootLayoutNav1 />
     </ReduxProvider>
   );
 }

@@ -6,13 +6,13 @@
 - [x]: Implememnt the `src` directory
 - [x]: add Module resolver
 - [x]: install redux
-- [ ]: Add redux to layout
-- [ ]: install RNP (React Native Paper)
-- [ ]: Implement the RNP Provider
+- [x]: Add redux to layout
+- [x]: install RNP (React Native Paper)
+- [x]: Implement the RNP Provider
 - [ ]: Add theme, colors and fonts from cli template
 - [ ]: Judhge the Text Component (When the time is suitable)
 - [ ]: resolve components imports
-- [ ]:
+- [ ]: React Native vector icons
 - [ ]:
 - [ ]:
 - [ ]:
