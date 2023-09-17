@@ -1,14 +1,15 @@
-import {Icon, TouchFiller} from '@components';
-import {styled} from 'nativewind';
-import React from 'react';
-import {View, ViewStyle} from 'react-native';
+import { styled } from "nativewind";
+import React from "react";
+import { View, ViewStyle } from "react-native";
+import Icon from "../Icon/Icon";
+import TouchFiller from "../TouchFiller/TouchFiller";
 
 const CircleIcon = ({
   size,
   color,
   iconName,
 
-  bgColor = 'transparent',
+  bgColor = "transparent",
   onPress,
   borderWidth = 0,
   borderColor,
@@ -34,7 +35,7 @@ const CircleIcon = ({
 
   return (
     <View
-      className={'overflow-hidden justify-center items-center'}
+      className={"overflow-hidden justify-center items-center"}
       style={[
         {
           width: size,
@@ -45,7 +46,8 @@ const CircleIcon = ({
           borderRadius: size / 2,
         },
         style,
-      ]}>
+      ]}
+    >
       <TouchFiller onPress={onPress} />
       <Icon size={iconSize} name={iconName} color={color} />
     </View>

@@ -10,9 +10,9 @@
 - [x]: install RNP (React Native Paper)
 - [x]: Implement the RNP Provider
 - [x]: Add theme, colors and fonts from cli template
-- [ ]: Judhge the Text Component (When the time is suitable)
-- [ ]: resolve components imports
-- [ ]: React Native vector icons
+- [x]: Judhge the Text Component (When the time is suitable)
+- [x]: resolve components imports
+- [x]: React Native vector icons
 - [ ]:
 - [ ]:
 - [ ]:

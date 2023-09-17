@@ -59,7 +59,6 @@ const RootLayoutNav1 = () => {
       <PaperProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: "modal" }} />
         </Stack>
       </PaperProvider>
     </ThemeProvider>
