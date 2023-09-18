@@ -1,9 +1,9 @@
-import {AppBar as AppBarOriginal} from '@components';
-import {themeSelector} from '@redux';
-import {useAppTheme} from '@theme';
-import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
-import {useSelector} from 'react-redux';
+import { AppBar as AppBarOriginal } from "@components";
+import { themeSelector } from "@redux";
+import { useAppTheme } from "@theme";
+import React from "react";
+import { SafeAreaView, ScrollView, StatusBar, View } from "react-native";
+import { useSelector } from "react-redux";
 
 const AppBar = ({
   title,
@@ -19,7 +19,7 @@ const MainLayout = (
     isScrollable = true,
     hasAppBar = true,
     hasBackButton = true,
-    title = '',
+    title = "",
     hzPadding = 15,
     vrPadding = 15,
   }: {
@@ -29,7 +29,7 @@ const MainLayout = (
     title?: string;
     hzPadding?: number;
     vrPadding?: number;
-  } = {},
+  } = {}
 ) => {
   const appBar = hasAppBar && (
     <AppBar title={title} hasBackButton={hasBackButton} />
@@ -43,9 +43,10 @@ const MainLayout = (
         style={{
           backgroundColor: colors.appBg,
           flex: 1,
-        }}>
+        }}
+      >
         <StatusBar
-          barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
+          barStyle={theme === "light" ? "dark-content" : "light-content"}
           backgroundColor={colors.appBg}
         />
         {appBar}
@@ -55,14 +56,16 @@ const MainLayout = (
           }}
           contentContainerStyle={{
             flexGrow: 1,
-          }}>
+          }}
+        >
           <View
             style={{
               marginHorizontal: hzPadding,
               marginVertical: vrPadding,
               flexGrow: 1,
-              alignSelf: 'stretch',
-            }}>
+              alignSelf: "stretch",
+            }}
+          >
             <ScreenComponent />
           </View>
         </ScrollView>
@@ -70,7 +73,7 @@ const MainLayout = (
     );
   }
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       {appBar}
       <ScreenComponent />
     </View>

@@ -1,13 +1,8 @@
-import { StyleSheet } from "react-native";
-
-//import EditScreenInfo from '../../components/EditScreenInfo';
-//import { Text, View } from "../../components/Themed";
-import { Text, Icon, TouchFiller } from "@components";
-import { View } from "react-native";
-import { Text as TextRN } from "react-native";
-import { useAppTheme } from "@theme";
+import { Icon, Text, TouchFiller } from "@components";
 import { Language as LanguageType, switchLanguage } from "@locale";
+import { useAppTheme } from "@theme";
 import { useTranslation } from "react-i18next";
+import { StyleSheet, Text as TextRN, View } from "react-native";
 import { Button } from "react-native-paper";
 
 export default function TabOneScreen() {

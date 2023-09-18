@@ -1,15 +1,14 @@
-import {CircleIcon, Text, TouchFiller} from '@components';
-import {setTheme, themeSelector} from '@redux';
-import {useAppTheme} from '@theme';
+import { CircleIcon, Text, TouchFiller } from '@components';
+import { RootStackParamList, navigationNames } from '@navigation';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { setTheme, themeSelector } from '@redux';
+import { useAppTheme } from '@theme';
 import React from 'react';
-import {useTranslation} from 'react-i18next';
-import {I18nManager, ScrollView, View} from 'react-native';
-import {Modal, Portal} from 'react-native-paper';
-import {useDispatch, useSelector} from 'react-redux';
-
-import {RootStackParamList, navigationNames} from '@navigation';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { useTranslation } from 'react-i18next';
+import { I18nManager, ScrollView, View } from 'react-native';
+import { Modal, Portal } from 'react-native-paper';
+import { useDispatch, useSelector } from 'react-redux';
 
 const AppBar = ({
   title,

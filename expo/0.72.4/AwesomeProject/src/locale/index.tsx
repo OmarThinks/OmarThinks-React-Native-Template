@@ -1,11 +1,10 @@
 import { getStoredLanguage, setStoredLanguage } from "@storage";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { I18nManager } from "react-native";
+import { I18nManager, NativeModules } from "react-native";
 import ar from "./ar/index";
 import de from "./de/index";
 import en from "./en/index";
-import { NativeModules } from "react-native";
 
 export const defaultNS = "common";
 

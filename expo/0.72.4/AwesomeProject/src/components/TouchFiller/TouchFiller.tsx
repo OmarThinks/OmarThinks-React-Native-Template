@@ -2,7 +2,6 @@ import { styled } from "nativewind";
 import React from "react";
 import { View, ViewStyle } from "react-native";
 import { TouchableRipple } from "react-native-paper";
-import { Touchable } from "react-native";
 
 const TouchFiller = ({
   onPress,

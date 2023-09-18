@@ -13,16 +13,16 @@
 - [x]: Judhge the Text Component (When the time is suitable)
 - [x]: resolve components imports
 - [x]: React Native vector icons
-- [ ]: fix the RN Restart problem
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
-- [ ]:
+- [x]: fix the RN Restart problem
+- [x]: Revise that all directories are good
+- [ ]: Home Screen
+- [ ]: Navigation: Stack (Or Slot)
+- [ ]: Components 1 screen
+- [ ]: Languages Screen
+- [ ]: Main Layout
+- [ ]: App Bar
+- [ ]: Theme switching
+- [ ]: delete constants folder
 - [ ]:
 - [ ]:
 - [ ]:

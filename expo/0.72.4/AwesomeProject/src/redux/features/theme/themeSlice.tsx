@@ -1,20 +1,20 @@
-import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
-import { setStoredTheme } from '@storage';
-import type { RootState } from 'src/redux/store';
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { setStoredTheme } from "@storage";
+import type { RootState } from "src/redux/store";
 
-export type Theme = 'light' | 'dark';
+export type Theme = "light" | "dark";
 
 export interface ThemeState {
   value: Theme;
 }
 
 const initialState: ThemeState = {
-  value: 'light'
+  value: "light",
 };
 
 export const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState,
   reducers: {
     setTheme: (state, action: PayloadAction<Theme>) => {
@@ -24,8 +24,8 @@ export const themeSlice = createSlice({
       // immutable state based off those changes
       state.value = action.payload;
       setStoredTheme(action.payload);
-    }
-  }
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function
