@@ -1,7 +1,8 @@
-import {styled} from 'nativewind';
-import React from 'react';
-import {View, ViewStyle} from 'react-native';
-import {TouchableRipple} from 'react-native-paper';
+import { styled } from "nativewind";
+import React from "react";
+import { View, ViewStyle } from "react-native";
+import { TouchableRipple } from "react-native-paper";
+import { Touchable } from "react-native";
 
 const TouchFiller = ({
   onPress,
@@ -18,14 +19,15 @@ const TouchFiller = ({
 }) => {
   return (
     <View
-      className={'overflow-hidden absolute h-full w-full'}
+      className={"overflow-hidden absolute h-full w-full"}
       style={[
         {
           borderRadius,
           zIndex,
         },
         style,
-      ]}>
+      ]}
+    >
       <TouchableRipple className="grow self-stretch" onPress={onPress}>
         <View />
       </TouchableRipple>

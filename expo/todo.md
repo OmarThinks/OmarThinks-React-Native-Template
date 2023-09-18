@@ -13,7 +13,7 @@
 - [x]: Judhge the Text Component (When the time is suitable)
 - [x]: resolve components imports
 - [x]: React Native vector icons
-- [ ]:
+- [ ]: fix the RN Restart problem
 - [ ]:
 - [ ]:
 - [ ]:
