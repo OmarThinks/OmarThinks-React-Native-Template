@@ -1,6 +1,6 @@
 import CircleIcon from "../CircleIcon/CircleIcon";
 import Text from "../Text/Text";
-import TouchFiller from "../Text/Text";
+import TouchFiller from "../TouchFiller/TouchFiller";
 import { setTheme, themeSelector } from "@redux";
 import { useAppTheme } from "@theme";
 import React from "react";
@@ -8,9 +8,12 @@ import { useTranslation } from "react-i18next";
 import { I18nManager, ScrollView, View } from "react-native";
 import { Modal, Portal } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
+import { router } from "expo-router";
+
 //import { RootStackParamList, navigationNames } from '@navigation';
 //import { useNavigation } from '@react-navigation/native';
 //import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
 const AppBar = ({
   title,
   hasBackButton,
@@ -103,7 +106,7 @@ const AppBar = ({
               <DrawerItem
                 onPress={() => {
                   try {
-                    //navigation.navigate(navigationNames.Home);
+                    router.push("/");
                   } catch (error) {}
                 }}
                 iconName={"home"}
@@ -114,7 +117,7 @@ const AppBar = ({
                 <DrawerItem
                   onPress={() => {
                     try {
-                      //navigation.navigate(navigationNames.Components1);
+                      router.push("/components1/");
                     } catch (error) {}
                   }}
                   iconName={"sitemap"}
@@ -125,7 +128,7 @@ const AppBar = ({
               <DrawerItem
                 onPress={() => {
                   try {
-                    //navigation.navigate(navigationNames.Language);
+                    router.push("/language/");
                   } catch (error) {}
                 }}
                 iconName={"language"}
