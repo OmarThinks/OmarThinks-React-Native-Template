@@ -13,10 +13,11 @@ import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { PaperProvider } from "react-native-paper";
 import { Provider as ReduxProvider, useSelector } from "react-redux";
+import { Slot } from "expo-router";
 
 export {
   // Catch any errors thrown by the Layout component.
-  ErrorBoundary
+  ErrorBoundary,
 } from "expo-router";
 
 export const unstable_settings = {
@@ -58,9 +59,10 @@ const RootLayoutNav1 = () => {
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <PaperProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Stack>
+        {/*<Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        </Stack>
+  </Stack>*/}
+        <Slot />
       </PaperProvider>
     </ThemeProvider>
   );

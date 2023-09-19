@@ -1,15 +1,14 @@
-import { CircleIcon, Text, TouchFiller } from '@components';
-import { RootStackParamList, navigationNames } from '@navigation';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { setTheme, themeSelector } from '@redux';
-import { useAppTheme } from '@theme';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { I18nManager, ScrollView, View } from 'react-native';
-import { Modal, Portal } from 'react-native-paper';
-import { useDispatch, useSelector } from 'react-redux';
-
+import { CircleIcon, Text, TouchFiller } from "@components";
+import { setTheme, themeSelector } from "@redux";
+import { useAppTheme } from "@theme";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { I18nManager, ScrollView, View } from "react-native";
+import { Modal, Portal } from "react-native-paper";
+import { useDispatch, useSelector } from "react-redux";
+//import { RootStackParamList, navigationNames } from '@navigation';
+//import { useNavigation } from '@react-navigation/native';
+//import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 const AppBar = ({
   title,
   hasBackButton,
@@ -21,13 +20,15 @@ const AppBar = ({
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
+  /*
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    */
 
   const toggleTheme = () => {
-    dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
+    dispatch(setTheme(theme === "light" ? "dark" : "light"));
   };
 
   const [modalVisible, setModalVisible] = React.useState(false);
@@ -35,17 +36,18 @@ const AppBar = ({
   return (
     <View
       className="h-[50] px-2 flex-row items-center justify-between self-stretch"
-      style={{backgroundColor: colors.appBarBg}}>
+      style={{ backgroundColor: colors.appBarBg }}
+    >
       <View className="flex-row grow shrink mr-5 items-center self-stretch">
         {hasBackButton && (
           <CircleIcon
             size={40}
-            iconName={I18nManager.isRTL ? 'arrow-right' : 'arrow-left'}
+            iconName={I18nManager.isRTL ? "arrow-right" : "arrow-left"}
             color={colors.normalText}
             borderWidth={2}
             onPress={() => {
               try {
-                navigation.goBack();
+                //navigation.goBack();
               } catch (error) {}
             }}
             className="mr-2"
@@ -54,16 +56,17 @@ const AppBar = ({
 
         <Text
           className="shrink"
-          style={{color: colors.normalText}}
+          style={{ color: colors.normalText }}
           variant="v20"
-          numberOfLines={1}>
+          numberOfLines={1}
+        >
           {title}
         </Text>
       </View>
       <View className="flex-row items-center">
         <CircleIcon
           size={40}
-          iconName={theme === 'light' ? 'moon' : 'sun'}
+          iconName={theme === "light" ? "moon" : "sun"}
           color={colors.normalText}
           borderWidth={2}
           onPress={toggleTheme}
@@ -88,42 +91,43 @@ const AppBar = ({
             visible={modalVisible}
             onDismiss={() => setModalVisible(false)}
             contentContainerStyle={{
-              width: '80%',
-              alignSelf: 'flex-start',
+              width: "80%",
+              alignSelf: "flex-start",
               flexGrow: 1,
               backgroundColor: colors.appBg,
-            }}>
+            }}
+          >
             <ScrollView>
               <DrawerItem
                 onPress={() => {
                   try {
-                    navigation.navigate(navigationNames.Home);
+                    //navigation.navigate(navigationNames.Home);
                   } catch (error) {}
                 }}
-                iconName={'home'}
-                title={t('screen.home')}
+                iconName={"home"}
+                title={t("screen.home")}
                 setModalVisible={setModalVisible}
               />
               {__DEV__ && (
                 <DrawerItem
                   onPress={() => {
                     try {
-                      navigation.navigate(navigationNames.Components1);
+                      //navigation.navigate(navigationNames.Components1);
                     } catch (error) {}
                   }}
-                  iconName={'sitemap'}
-                  title={t('screen.components1')}
+                  iconName={"sitemap"}
+                  title={t("screen.components1")}
                   setModalVisible={setModalVisible}
                 />
               )}
               <DrawerItem
                 onPress={() => {
                   try {
-                    navigation.navigate(navigationNames.Language);
+                    //navigation.navigate(navigationNames.Language);
                   } catch (error) {}
                 }}
-                iconName={'language'}
-                title={t('language')}
+                iconName={"language"}
+                title={t("language")}
                 setModalVisible={setModalVisible}
               />
             </ScrollView>
@@ -148,11 +152,12 @@ const DrawerItem = ({
   const colors = useAppTheme().colors;
   const theme = useSelector(themeSelector);
 
-  const borderColor = theme === 'light' ? 'border-black' : 'border-white';
+  const borderColor = theme === "light" ? "border-black" : "border-white";
 
   return (
     <View
-      className={`${borderColor} border-2 m-2 rounded-[15px]  overflow-hidden`}>
+      className={`${borderColor} border-2 m-2 rounded-[15px]  overflow-hidden`}
+    >
       <View className="flex-row items-center p-2">
         <CircleIcon
           size={40}

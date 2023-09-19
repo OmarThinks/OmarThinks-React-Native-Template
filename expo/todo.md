@@ -15,8 +15,9 @@
 - [x]: React Native vector icons
 - [x]: fix the RN Restart problem
 - [x]: Revise that all directories are good
-- [ ]: Home Screen
 - [ ]: Navigation: Stack (Or Slot)
+- [ ]: Splash Screen
+- [ ]: Home Screen
 - [ ]: Components 1 screen
 - [ ]: Languages Screen
 - [ ]: Main Layout
