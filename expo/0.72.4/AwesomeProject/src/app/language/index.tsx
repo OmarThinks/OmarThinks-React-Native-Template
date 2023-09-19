@@ -56,6 +56,5 @@ export default () => {
 
   return MainLayout(Language, {
     title: t("language"),
-    hasBackButton: true,
   });
 };

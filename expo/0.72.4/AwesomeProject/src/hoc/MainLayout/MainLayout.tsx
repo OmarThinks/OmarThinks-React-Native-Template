@@ -5,35 +5,27 @@ import React from "react";
 import { SafeAreaView, ScrollView, StatusBar, View } from "react-native";
 import { useSelector } from "react-redux";
 
-const AppBar = ({
-  title,
-  hasBackButton,
-}: {
-  title?: string;
-  hasBackButton: boolean;
-}) => <AppBarOriginal title={title} hasBackButton={hasBackButton} />;
+const AppBar = ({ title }: { title?: string }) => (
+  <AppBarOriginal title={title} />
+);
 
 const MainLayout = (
   ScreenComponent: React.FC,
   {
     isScrollable = true,
     hasAppBar = true,
-    hasBackButton = true,
     title = "",
     hzPadding = 15,
     vrPadding = 15,
   }: {
     isScrollable?: boolean;
     hasAppBar?: boolean;
-    hasBackButton?: boolean;
     title?: string;
     hzPadding?: number;
     vrPadding?: number;
   } = {}
 ) => {
-  const appBar = hasAppBar && (
-    <AppBar title={title} hasBackButton={hasBackButton} />
-  );
+  const appBar = hasAppBar && <AppBar title={title} />;
   const colors = useAppTheme().colors;
   const theme = useSelector(themeSelector);
 

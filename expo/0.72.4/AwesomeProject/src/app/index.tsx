@@ -22,6 +22,5 @@ export default () => {
 
   return MainLayout(Home, {
     title: t("screen.home"),
-    hasBackButton: false,
   });
 };

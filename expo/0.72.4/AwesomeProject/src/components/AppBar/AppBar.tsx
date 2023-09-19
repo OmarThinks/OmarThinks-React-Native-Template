@@ -14,13 +14,7 @@ import { router } from "expo-router";
 //import { useNavigation } from '@react-navigation/native';
 //import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-const AppBar = ({
-  title,
-  hasBackButton,
-}: {
-  title?: string;
-  hasBackButton: boolean;
-}) => {
+const AppBar = ({ title }: { title?: string }) => {
   const colors = useAppTheme().colors;
   const dispatch = useDispatch();
   const theme = useSelector(themeSelector);
@@ -44,7 +38,7 @@ const AppBar = ({
       style={{ backgroundColor: colors.appBarBg }}
     >
       <View className="flex-row grow shrink mr-5 items-center self-stretch">
-        {hasBackButton && (
+        {router.canGoBack() && (
           <CircleIcon
             size={40}
             iconName={I18nManager.isRTL ? "arrow-right" : "arrow-left"}
@@ -53,6 +47,7 @@ const AppBar = ({
             onPress={() => {
               try {
                 //navigation.goBack();
+                router.back();
               } catch (error) {}
             }}
             className="mr-2"
