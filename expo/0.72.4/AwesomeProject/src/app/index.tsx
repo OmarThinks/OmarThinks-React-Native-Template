@@ -1,21 +1,27 @@
-import { View, Text } from "react-native";
+import { Text } from "@components";
+import { MainLayout } from "@hoc";
 import React from "react";
-import { Button } from "react-native-paper";
-import { Link, router } from "expo-router";
+import { useTranslation } from "react-i18next";
+import { View } from "react-native";
 
-const SplashScreen = () => {
+const Home = () => {
+  const { t } = useTranslation();
+  // console.log(i18n.language);
+
   return (
-    <View>
-      <Text>Hi</Text>
-      <Button
-        onPress={() => {
-          router.replace("/home/");
-        }}
-      >
-        <Text>Hey</Text>
-      </Button>
+    <View className="grow self-stretch justify-center items-center">
+      <Text className="justify-center font-bold text-[30px]">
+        {t("screen.home")}
+      </Text>
     </View>
   );
 };
 
-export default SplashScreen;
+export default () => {
+  const { t } = useTranslation();
+
+  return MainLayout(Home, {
+    title: t("screen.home"),
+    hasBackButton: false,
+  });
+};
