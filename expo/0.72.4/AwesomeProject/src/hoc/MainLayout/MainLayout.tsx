@@ -2,7 +2,7 @@ import { AppBar as AppBarOriginal } from "@components";
 import { themeSelector } from "@redux";
 import { useAppTheme } from "@theme";
 import React from "react";
-import { SafeAreaView, ScrollView, StatusBar, View } from "react-native";
+import { ScrollView, StatusBar, View } from "react-native";
 import { useSelector } from "react-redux";
 
 const AppBar = ({ title }: { title?: string }) => (
@@ -31,11 +31,9 @@ const MainLayout = (
 
   if (isScrollable) {
     return (
-      <SafeAreaView
-        style={{
-          backgroundColor: colors.appBg,
-          flex: 1,
-        }}
+      <View
+        className="self-stretch grow"
+        style={{ height: "100%", backgroundColor: colors.appBg }}
       >
         <StatusBar
           barStyle={theme === "light" ? "dark-content" : "light-content"}
@@ -56,18 +54,35 @@ const MainLayout = (
               marginVertical: vrPadding,
               flexGrow: 1,
               alignSelf: "stretch",
+              //backgroundColor: "red",
             }}
           >
             <ScreenComponent />
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     );
   }
   return (
-    <View style={{ flex: 1 }}>
+    <View
+      style={{
+        flexGrow: 1,
+        alignSelf: "stretch",
+        height: "100%",
+        backgroundColor: colors.appBg,
+      }}
+    >
       {appBar}
-      <ScreenComponent />
+      <View
+        style={{
+          flexGrow: 1,
+          alignSelf: "stretch",
+          marginHorizontal: hzPadding,
+          marginVertical: vrPadding,
+        }}
+      >
+        <ScreenComponent />
+      </View>
     </View>
   );
 };

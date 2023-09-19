@@ -6,11 +6,10 @@ import { View } from "react-native";
 
 const Home = () => {
   const { t } = useTranslation();
-  // console.log(i18n.language);
 
   return (
-    <View className="grow self-stretch justify-center items-center">
-      <Text className="justify-center font-bold text-[30px]">
+    <View className="flex-1 justify-center items-center grow">
+      <Text variant="v25" className="text-center">
         {t("screen.home")}
       </Text>
     </View>

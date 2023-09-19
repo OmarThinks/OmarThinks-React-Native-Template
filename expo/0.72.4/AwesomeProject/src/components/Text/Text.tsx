@@ -20,7 +20,7 @@ const Text = ({
   return (
     <TextInner
       {...props}
-      style={[style, { color: colors.normalText }]}
+      style={[{ color: colors.normalText }, style]}
       variant={variant}
     >
       {children}

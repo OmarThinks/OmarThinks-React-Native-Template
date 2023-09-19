@@ -15,16 +15,16 @@
 - [x]: React Native vector icons
 - [x]: fix the RN Restart problem
 - [x]: Revise that all directories are good
-- [ ]: Navigation: Stack (Or Slot)
-- [ ]: Splash Screen
+- [x]: Navigation: Stack (Or Slot)
+- [x]: Splash Screen
 - [ ]: Home Screen
 - [ ]: Components 1 screen
 - [ ]: Languages Screen
-- [ ]: Main Layout
-- [ ]: App Bar
-- [ ]: Theme switching
+- [x]: Main Layout
+- [x]: App Bar
+- [x]: Theme switching
 - [ ]: delete constants folder
-- [ ]:
+- [ ]: Review All
 - [ ]:
 - [ ]:
 - [ ]:
