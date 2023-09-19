@@ -15,6 +15,15 @@ import { PaperProvider } from "react-native-paper";
 import { Provider as ReduxProvider, useSelector } from "react-redux";
 import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { initializeLanguage } from "@locale";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { setTheme } from "@redux";
+import { AnyAction } from "@reduxjs/toolkit";
+import { getStoredTheme } from "@storage";
+import React, { Dispatch } from "react";
+import { View } from "react-native";
+import { useDispatch } from "react-redux";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -28,6 +37,11 @@ export const unstable_settings = {
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+const initializeTheme = async (dispatch: Dispatch<AnyAction>) => {
+  const storedTheme = await getStoredTheme();
+  dispatch(setTheme(storedTheme));
+};
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
@@ -46,29 +60,63 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  if (!loaded) {
-    return null;
+  if (loaded) {
+    return <RootLayoutNav />;
   }
 
-  return <RootLayoutNav />;
+  return null;
 }
 
 const RootLayoutNav1 = () => {
   const colorScheme = useColorScheme();
   const theme = useSelector(themeSelector);
 
-  return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <PaperProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        {/*<Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-  </Stack>*/}
-        <SafeAreaView>
-          <Slot />
-        </SafeAreaView>
-      </PaperProvider>
-    </ThemeProvider>
-  );
+  const dispatch = useDispatch();
+
+  const [isReady1, setIsReady1] = React.useState(false);
+  const [isReady2, setIsReady2] = React.useState(false);
+  const [initialized, setInitialized] = React.useState(false);
+  console.log(initialized, "initialized");
+  console.log(isReady1, "isReady1");
+  console.log(isReady2, "isReady2");
+
+  React.useEffect(() => {
+    initializeLanguage()
+      .catch(() => {})
+      .finally(() => {
+        setIsReady1(true);
+      });
+
+    initializeTheme(dispatch)
+      .catch(() => {})
+      .finally(() => {
+        setIsReady2(true);
+      });
+  }, [dispatch]);
+
+  React.useEffect(() => {
+    if (isReady1 && isReady2) {
+      setInitialized(true);
+    }
+  }, [isReady1, isReady2]);
+
+  if (isReady1 && isReady2 && initialized) {
+    console.log("should return screen now");
+    return (
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <PaperProvider theme={theme === "light" ? lightTheme : darkTheme}>
+          {/*<Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>*/}
+          <SafeAreaView>
+            <Slot />
+          </SafeAreaView>
+        </PaperProvider>
+      </ThemeProvider>
+    );
+  }
+
+  return null;
 };
 
 function RootLayoutNav() {
@@ -78,3 +126,61 @@ function RootLayoutNav() {
     </ReduxProvider>
   );
 }
+
+/*
+
+
+import {initializeLanguage} from '@locale';
+import {RootStackParamList, navigationNames} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {setTheme} from '@redux';
+import {AnyAction} from '@reduxjs/toolkit';
+import {getStoredTheme} from '@storage';
+import React, {Dispatch} from 'react';
+import {View} from 'react-native';
+import {useDispatch} from 'react-redux';
+
+const initializeTheme = async (dispatch: Dispatch<AnyAction>) => {
+  const storedTheme = await getStoredTheme();
+  dispatch(setTheme(storedTheme));
+};
+
+const Splash = () => {
+  // Navigation
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const dispatch = useDispatch();
+
+  const [isReady1, setIsReady1] = React.useState(false);
+  const [isReady2, setIsReady2] = React.useState(false);
+  const [initialized, setInitialized] = React.useState(false);
+
+  React.useEffect(() => {
+    initializeLanguage()
+      .catch(() => {})
+      .finally(() => {
+        setIsReady1(true);
+      });
+
+    initializeTheme(dispatch)
+      .catch(() => {})
+      .finally(() => {
+        setIsReady2(true);
+      });
+  }, [dispatch]);
+
+  React.useEffect(() => {
+    if (isReady1 && isReady2 && !initialized) {
+      setInitialized(true);
+      navigation.replace(navigationNames.Home);
+    }
+  }, [isReady1, isReady2, initialized, navigation]);
+
+  return <View />;
+};
+
+export default Splash;
+
+*/
