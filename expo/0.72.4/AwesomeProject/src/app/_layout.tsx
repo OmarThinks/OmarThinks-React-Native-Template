@@ -14,6 +14,7 @@ import { useColorScheme } from "react-native";
 import { PaperProvider } from "react-native-paper";
 import { Provider as ReduxProvider, useSelector } from "react-redux";
 import { Slot } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -62,7 +63,9 @@ const RootLayoutNav1 = () => {
         {/*<Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
   </Stack>*/}
-        <Slot />
+        <SafeAreaView>
+          <Slot />
+        </SafeAreaView>
       </PaperProvider>
     </ThemeProvider>
   );

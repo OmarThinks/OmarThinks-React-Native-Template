@@ -1,4 +1,6 @@
-import { CircleIcon, Text, TouchFiller } from "@components";
+import CircleIcon from "../CircleIcon/CircleIcon";
+import Text from "../Text/Text";
+import TouchFiller from "../Text/Text";
 import { setTheme, themeSelector } from "@redux";
 import { useAppTheme } from "@theme";
 import React from "react";
