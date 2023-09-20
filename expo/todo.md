@@ -24,7 +24,8 @@
 - [x]: App Bar
 - [x]: Theme switching
 - [x]: delete constants folder
-- [ ]: Review All
+- [x]: Review All
+- [x]: Remove logs
 - [ ]: Documentation
 - [ ]:
 - [ ]:
