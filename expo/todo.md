@@ -17,15 +17,15 @@
 - [x]: Revise that all directories are good
 - [x]: Navigation: Stack (Or Slot)
 - [x]: Splash Screen
-- [ ]: Home Screen
-- [ ]: Components 1 screen
-- [ ]: Languages Screen
+- [x]: Home Screen
+- [x]: Components 1 screen
+- [x]: Languages Screen
 - [x]: Main Layout
 - [x]: App Bar
 - [x]: Theme switching
-- [ ]: delete constants folder
+- [x]: delete constants folder
 - [ ]: Review All
-- [ ]:
+- [ ]: Documentation
 - [ ]:
 - [ ]:
 - [ ]:
