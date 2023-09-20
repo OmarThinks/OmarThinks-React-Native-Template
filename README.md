@@ -2,7 +2,7 @@
 
 # A) About:
 
-A template pre-configured with requirements for most projects
+A template pre-configured with requirements for most projects for both `cli` and `expo` builds.
 
 ## Youtube:
 
@@ -20,12 +20,12 @@ git clone https://github.com/OmarThinks/OmarThinks-React-Native-Template
 
 </b>
 
-- Open the cli folder (I might create an Expo folder soon)
-- Copy the project with the latest version from the cli folder, and paste it
+- Choose the `cli` or `expo` folder
+- Copy the project with the latest version from the folder, and paste it
 - run this command `npm install`
 - run this command `npm start`
 
-# C) Texhnologies Used:
+# C) Technologies Used:
 
 - React
 - React Native
@@ -124,6 +124,11 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
+### Note:
+
+Theme type safety is for CLI an Expo.  
+But navigation type safety is for CLI only, since Expo has pre-defined type safe navigational system.
+
 </b>
 
 # E) Motivation:
@@ -132,4 +137,4 @@ export default MyComponent;
 
 # F) Todos:
 
-- Create an Expo template
+Follow up with React Native version often to keep the template up to date.
