@@ -137,4 +137,6 @@ But navigation type safety is for CLI only, since Expo has pre-defined type safe
 
 # F) Todos:
 
-Follow up with React Native version often to keep the template up to date.
+- Follow up with React Native versions often to keep the template up to date.
+- Remove the AppBar component, and just use the React Navogation AppBar features.
+- Remove the MainLayout HOC (Higher-Order Component), and just use React Navigation features
